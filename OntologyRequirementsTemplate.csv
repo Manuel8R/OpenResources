@@ -21,7 +21,7 @@
 20;¿Cuántas evoluciones posibles tiene un Digimon?;Numero de evoluciones posibles del Digimon especificado;Proposed;Por evoluciones se entienden todas las subsecuentes evoluciones de la evolución que pueda tener el Digimon especificado. Todas incluidas.; ;;
 21;¿Qué Digimon comparten el mismo tipo y atributo?;Lista de Digimon con el atributo y tipo especificados;Proposed;;;;
 22;¿Cuál es la media o el rango de estadísticas por nivel evolutivo?;Media de estadísticas de todos los Digimon del nivel evolutivo específico;Proposed;;;;
-23;"¿Qué Digimon de etapa ""Rookie"" tienen el atributo ""Earth""?";Lista de nombre/nombres de Digimon de la etapa y atributo especificados;Proposed;;;;
+23;¿Qué Digimon de etapa "Rookie" tienen el atributo "Earth"?;Lista de nombre/nombres de Digimon de la etapa y atributo especificados;Proposed;;;;
 24;¿Qué Digimon pueden aprender habilidades de un tipo especifico?;Lista de nombres de Digimon que pueden aprender movimientos del tipo especificado;Proposed;;;;
-25;"¿Qué Digimon tiene el valor de ""Atk"" (Ataque) más alto?";Nombre del Digimon con mayor ATK;Proposed;;;;
+25;¿Qué Digimon tiene el valor de "Atk" (Ataque) más alto?;Nombre del Digimon con mayor ATK;Proposed;;;;
 26;¿Cuáles son los Digimon que tienen más de 1500 HP base?;Lista de nombres de Digimon con HP mayor al especificado;Proposed;;;;
