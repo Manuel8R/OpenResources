@@ -1,5 +1,4 @@
-﻿Identifier;"Competency Question /
- Natural language sentence (fact)";Answer (For Competency Questions);Status (Proposed, Accepted, Rejected, Deprecated);Comments (optional);Extracted from (provenance);Relation with other requirements (optional);Associated ontology elements (to be used after ontology  conceptualization assignment)
+﻿Identifier;Competency Question /Natural language sentence (fact);Answer (For Competency Questions);Status (Proposed, Accepted, Rejected, Deprecated);Comments (optional);Extracted from (provenance);Relation with other requirements (optional);Associated ontology elements (to be used after ontology  conceptualization assignment)
 1;¿Qué Digimons existen en el dataset?;Lista de nombres de Digimon;Proposed;;;;
 2;¿Cuál es el nivel de un Digimon específico?;Nivel del Digimon;Proposed;0 - 100;;;
 3;¿Cuál es el atributo de un Digimon específico?;Atributo del digimon;Proposed;;;;
