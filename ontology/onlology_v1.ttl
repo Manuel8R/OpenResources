@@ -12,7 +12,7 @@
 :DigimonOntology rdf:type owl:Ontology ;
     rdfs:label "Digimon Ontology" ;
     rdfs:comment "Ontologia de los csv en /initial_dataset" ;
-    owl:versionInfo "1.1" .
+    owl:versionInfo "1.2" .
 
 
 
@@ -37,19 +37,19 @@
     rdfs:label "Stage" ;
     rdfs:comment "Nivel evolutivo de un Digimon" .
 
-:Type rdf:type owl:Class ;
+:TypeDigi rdf:type owl:Class ;
     rdfs:label "TypeDigi" ;
     rdfs:comment "Tipo de Digimon" .
 
-:Type rdf:type owl:Class ;
-    rdfs:label "TypeAtt" ;
+:TypeMove rdf:type owl:Class ;
+    rdfs:label "TypeMove" ;
     rdfs:comment "Tipo de ataque (por ejemplo Vaccine, Virus o Physical)" .
 
-:Attribute rdf:type owl:Class ;
+:AttributeDigi rdf:type owl:Class ;
     rdfs:label "AttributeDigi" ;
     rdfs:comment "Atributo elemental de un Digimon" .
 
-:Attribute rdf:type owl:Class ;
+:AttributeMove rdf:type owl:Class ;
     rdfs:label "AttributeMove" ;
     rdfs:comment "Atributo elemental de un movimiento (por ejemplo Fire, Water)" .
 
@@ -78,64 +78,45 @@
     rdfs:domain :Digimon ;
     rdfs:range :Stage .
 
-:hasType rdf:type owl:ObjectProperty ;
+:hasTypeDigi rdf:type owl:ObjectProperty ;
     rdfs:label "has typeDigi" ;
     rdfs:comment "Indica el tipo de un Digimon" ;
-    rdfs:domain [
-        rdf:type owl:Class ;
-        owl:unionOf ( :Digimon :Move )
-    ] ;
-    rdfs:range :Type .
+    rdfs:domain :Digimon ;
+    rdfs:range :TypeDigi .
 
-:hasType rdf:type owl:ObjectProperty ;
+:hasTypeMove rdf:type owl:ObjectProperty ;
     rdfs:label "has typeMove" ;
     rdfs:comment "Indica el tipo de un movimiento" ;
-    rdfs:domain [
-        rdf:type owl:Class ;
-        owl:unionOf ( :Digimon :Move )
-    ] ;
-    rdfs:range :Type .
+    rdfs:domain :Move ;
+    rdfs:range :TypeMove .
 
-:hasAttribute rdf:type owl:ObjectProperty ;
+:hasAttributeDigi rdf:type owl:ObjectProperty ;
     rdfs:label "has attributeDigi" ;
     rdfs:comment "Indica el atributo elemental de un Digimon" ;
-    rdfs:domain [
-        rdf:type owl:Class ;
-        owl:unionOf ( :Digimon :Move )
-    ] ;
-    rdfs:range :Attribute .
+    rdfs:domain :Digimon ;
+    rdfs:range :AttributeDigi .
 
-:hasAttribute rdf:type owl:ObjectProperty ;
+:hasAttributeMove rdf:type owl:ObjectProperty ;
     rdfs:label "has attributeMove" ;
     rdfs:comment "Indica el atributo elemental de un movimiento" ;
-    rdfs:domain [
-        rdf:type owl:Class ;
-        owl:unionOf ( :Digimon :Move )
-    ] ;
-    rdfs:range :Attribute .
-
-:hasAttribute rdf:type owl:ObjectProperty ;
-    rdfs:label "has attributeMove" ;
-    rdfs:comment "Indica el atributo elemental de un movimiento" ;
-    rdfs:domain [
-        rdf:type owl:Class ;
-        owl:unionOf ( :Digimon :Move )
-    ] ;
-    rdfs:range :Attribute .
+    rdfs:domain :Move ;
+    rdfs:range :AttributeMove .
 
 
 
 
 # ------ Datatype Properties ------
 
-:name rdf:type owl:DatatypeProperty ;
+:nameMove rdf:type owl:DatatypeProperty ;
     rdfs:label "nameMove" ;
     rdfs:comment "Nombre de un movimiento" ;
+    rdfs:domain :Move ;
     rdfs:range xsd:string .
 
-:name rdf:type owl:DatatypeProperty ;
+:nameSupp rdf:type owl:DatatypeProperty ;
     rdfs:label "nameSupp" ;
     rdfs:comment "Nombre de una habilidad de soporte" ;
+    rdfs:domain :SupportSkill ;
     rdfs:range xsd:string .
 
 :power rdf:type owl:DatatypeProperty ;
@@ -224,57 +205,128 @@
 
 
 
-### Type
+### TypeDigi
 
-:Free rdf:type :Type ;
+:Free rdf:type :TypeDigi ;
     rdfs:label "Free" ;
     rdfs:comment "Tipo neutro sin ventaja ni desventaja clara" .
 
-:Vaccine rdf:type :Type ;
+:Vaccine rdf:type :TypeDigi ;
     rdfs:label "Vaccine" ;
     rdfs:comment "Tipo fuerte contra Virus" .
 
-:Virus rdf:type :Type ;
+:Virus rdf:type :TypeDigi ;
     rdfs:label "Virus" ;
     rdfs:comment "Tipo fuerte contra Data" .
 
-:Data rdf:type :Type ;
+:Data rdf:type :TypeDigi ;
     rdfs:label "Data" ;
     rdfs:comment "Tipo fuerte contra Vaccine" .
 
-:Physical rdf:type :Type ;
+
+###TypeMove
+
+:Fixed rdf:type :TypeMove ;
+    rdfs:label "Fixed" ;
+    rdfs:comment "Tipo de daño fijo" .
+
+:Support rdf:type :TypeMove ;
+    rdfs:label "Support" ;
+    rdfs:comment "Habilidad de support" .
+
+:Direct rdf:type :TypeMove ;
+    rdfs:label "Direct" ;
+    rdfs:comment "Tiene efectos directos el ataque" .
+
+:Physical rdf:type :TypeMove ;
     rdfs:label "Physical" ;
     rdfs:comment "Tipo de ataque físico" .
 
-:Magic rdf:type :Type ;
+:Magic rdf:type :TypeMove ;
     rdfs:label "Magic" ;
     rdfs:comment "Tipo de ataque mágico" .
 
 
+### AttributeDigi
 
-### Attribute
-
-:Neutral rdf:type :Attribute ;
+:Neutral rdf:type :AttributeDigi ;
     rdfs:label "Neutral" ;
     rdfs:comment "Atributo sin afinidad elemental" .
 
-:Fire rdf:type :Attribute ;
+:Fire rdf:type :AttributeDigi ;
     rdfs:label "Fire" ;
     rdfs:comment "Atributo de fuego" .
 
-:Water rdf:type :Attribute ;
+:Water rdf:type :AttributeDigi ;
     rdfs:label "Water" ;
     rdfs:comment "Atributo de agua" .
 
-:Plant rdf:type :Attribute ;
+:Plant rdf:type :AttributeDigi ;
     rdfs:label "Plant" ;
     rdfs:comment "Atributo de tipo planta" .
 
-:Electric rdf:type :Attribute ;
+:Electric rdf:type :AttributeDigi ;
     rdfs:label "Electric" ;
     rdfs:comment "Atributo eléctrico" .
 
+:Earth rdf:type :AttributeDigi ;
+    rdfs:label "Earth" ;
+    rdfs:comment "Atributo de tierra" .
 
+:Wind rdf:type :AttributeDigi ;
+    rdfs:label "Wind" ;
+    rdfs:comment "Atributo de viento" .
+
+:Light rdf:type :AttributeDigi ;
+    rdfs:label "Light" ;
+    rdfs:comment "Atributo de luz" .
+
+:Dark rdf:type :AttributeDigi ;
+    rdfs:label "Dark" ;
+    rdfs:comment "Atributo de oscuridad" .
+
+
+### AttributeMove
+
+:Neutral rdf:type :AttributeMove;
+    rdfs:label "Neutral" ;
+    rdfs:comment "Atributo sin afinidad elemental" .
+
+:Fire rdf:type :AttributeMove;
+    rdfs:label "Fire" ;
+    rdfs:comment "Atributo de fuego" .
+
+:Water rdf:type :AttributeMove;
+    rdfs:label "Water" ;
+    rdfs:comment "Atributo de agua" .
+
+:Plant rdf:type :AttributeMove;
+    rdfs:label "Plant" ;
+    rdfs:comment "Atributo de tipo planta" .
+
+:Electric rdf:type :AttributeMove;
+    rdfs:label "Electric" ;
+    rdfs:comment "Atributo eléctrico" .
+
+:Thunder rdf:type :AttributeMove;
+    rdfs:label "Thunder" ;
+    rdfs:comment "Atributo de rayo" .
+
+:Earth rdf:type :AttributeMove;
+    rdfs:label "Earth" ;
+    rdfs:comment "Atributo de tierra" .
+
+:Wind rdf:type :AttributeMove;
+    rdfs:label "Wind" ;
+    rdfs:comment "Atributo de viento" .
+
+:Light rdf:type :AttributeMove;
+    rdfs:label "Light" ;
+    rdfs:comment "Atributo de luz" .
+
+:Dark rdf:type :AttributeMove;
+    rdfs:label "Dark" ;
+    rdfs:comment "Atributo de oscuridad" .
 
 
 
