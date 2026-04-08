@@ -12,7 +12,7 @@
 :DigimonOntology rdf:type owl:Ontology ;
     rdfs:label "Digimon Ontology" ;
     rdfs:comment "Ontologia de los csv en /initial_dataset" ;
-    owl:versionInfo "1.0" .
+    owl:versionInfo "1.1" .
 
 
 
@@ -38,12 +38,21 @@
     rdfs:comment "Nivel evolutivo de un Digimon" .
 
 :Type rdf:type owl:Class ;
-    rdfs:label "Type" ;
-    rdfs:comment "Tipo de Digimon o tipo de ataque (por ejemplo Vaccine, Virus o Physical)" .
+    rdfs:label "TypeDigi" ;
+    rdfs:comment "Tipo de Digimon" .
+
+:Type rdf:type owl:Class ;
+    rdfs:label "TypeAtt" ;
+    rdfs:comment "Tipo de ataque (por ejemplo Vaccine, Virus o Physical)" .
 
 :Attribute rdf:type owl:Class ;
-    rdfs:label "Attribute" ;
-    rdfs:comment "Atributo elemental de un Digimon o movimiento (por ejemplo Fire, Water)" .
+    rdfs:label "AttributeDigi" ;
+    rdfs:comment "Atributo elemental de un Digimon" .
+
+:Attribute rdf:type owl:Class ;
+    rdfs:label "AttributeMove" ;
+    rdfs:comment "Atributo elemental de un movimiento (por ejemplo Fire, Water)" .
+
 
 
 
@@ -70,8 +79,17 @@
     rdfs:range :Stage .
 
 :hasType rdf:type owl:ObjectProperty ;
-    rdfs:label "has type" ;
-    rdfs:comment "Indica el tipo de un Digimon o movimiento" ;
+    rdfs:label "has typeDigi" ;
+    rdfs:comment "Indica el tipo de un Digimon" ;
+    rdfs:domain [
+        rdf:type owl:Class ;
+        owl:unionOf ( :Digimon :Move )
+    ] ;
+    rdfs:range :Type .
+
+:hasType rdf:type owl:ObjectProperty ;
+    rdfs:label "has typeMove" ;
+    rdfs:comment "Indica el tipo de un movimiento" ;
     rdfs:domain [
         rdf:type owl:Class ;
         owl:unionOf ( :Digimon :Move )
@@ -79,8 +97,26 @@
     rdfs:range :Type .
 
 :hasAttribute rdf:type owl:ObjectProperty ;
-    rdfs:label "has attribute" ;
-    rdfs:comment "Indica el atributo elemental de un Digimon o movimiento" ;
+    rdfs:label "has attributeDigi" ;
+    rdfs:comment "Indica el atributo elemental de un Digimon" ;
+    rdfs:domain [
+        rdf:type owl:Class ;
+        owl:unionOf ( :Digimon :Move )
+    ] ;
+    rdfs:range :Attribute .
+
+:hasAttribute rdf:type owl:ObjectProperty ;
+    rdfs:label "has attributeMove" ;
+    rdfs:comment "Indica el atributo elemental de un movimiento" ;
+    rdfs:domain [
+        rdf:type owl:Class ;
+        owl:unionOf ( :Digimon :Move )
+    ] ;
+    rdfs:range :Attribute .
+
+:hasAttribute rdf:type owl:ObjectProperty ;
+    rdfs:label "has attributeMove" ;
+    rdfs:comment "Indica el atributo elemental de un movimiento" ;
     rdfs:domain [
         rdf:type owl:Class ;
         owl:unionOf ( :Digimon :Move )
@@ -93,8 +129,13 @@
 # ------ Datatype Properties ------
 
 :name rdf:type owl:DatatypeProperty ;
-    rdfs:label "name" ;
-    rdfs:comment "Nombre de un movimiento o habilidad de soporte" ;
+    rdfs:label "nameMove" ;
+    rdfs:comment "Nombre de un movimiento" ;
+    rdfs:range xsd:string .
+
+:name rdf:type owl:DatatypeProperty ;
+    rdfs:label "nameSupp" ;
+    rdfs:comment "Nombre de una habilidad de soporte" ;
     rdfs:range xsd:string .
 
 :power rdf:type owl:DatatypeProperty ;
@@ -139,6 +180,21 @@
     rdfs:domain :Digimon ;
     rdfs:range xsd:int .
 
+
+# ------ TransititiveProperty ------
+
+:evolvesTo rdf:type owl:TransitiveProperty ;
+    rdfs:label "evolvesTo" ;
+    rdfs:comment "Indica a que Digimon evolucionara" ;
+    rdfs:domain :Digimon ;
+    rdfs:range :Digimon .
+
+:evolvesFrom rdf:type owl:TransitiveProperty ;
+    rdfs:label "evolvesFrom" ;
+    rdfs:comment "Indica de que Digimon evoluciona" ;
+    owl:inverseOf :evolvesTo ;
+    rdfs:domain :Digimon ;
+    rdfs:range :Digimon .
 
 
 
