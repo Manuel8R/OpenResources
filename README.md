@@ -25,6 +25,9 @@ OpenResources/
 |   |--DigiDB_supportlist.csv 
 |   |--digimon_additional_dataset.csv
 |
+|-- ontology/
+|   |--ontology_vX.ttl
+|
 |-- Casos de uso.pdf # Ejemplos de casos de uso
 |-- Discarded fields.pdf # Campos descartados de los datasets y su justificación
 |-- OntologyRequirementsTemplate.csv # Requisitos 

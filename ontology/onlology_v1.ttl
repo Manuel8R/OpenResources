@@ -1,0 +1,244 @@
+@prefix : <http://example.org/digimon#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+
+
+# ------Ontology metadata ------
+
+:DigimonOntology rdf:type owl:Ontology ;
+    rdfs:label "Digimon Ontology" ;
+    rdfs:comment "Ontologia de los csv en /initial_dataset" ;
+    owl:versionInfo "1.0" .
+
+
+
+
+
+
+# ------ Classes ------
+
+:Digimon rdf:type owl:Class ;
+    rdfs:label "Digimon" ;
+    rdfs:comment "Entidad que representa una criatura Digimon con atributos y estadísticas" .
+
+:Move rdf:type owl:Class ;
+    rdfs:label "Move" ;
+    rdfs:comment "Movimiento que puede ser usado por un Digimon en combate" .
+
+:SupportSkill rdf:type owl:Class ;
+    rdfs:label "Support Skill" ;
+    rdfs:comment "Habilidad pasiva que afecta al Digimon" .
+
+:Stage rdf:type owl:Class ;
+    rdfs:label "Stage" ;
+    rdfs:comment "Nivel evolutivo de un Digimon" .
+
+:Type rdf:type owl:Class ;
+    rdfs:label "Type" ;
+    rdfs:comment "Tipo de Digimon o tipo de ataque (por ejemplo Vaccine, Virus o Physical)" .
+
+:Attribute rdf:type owl:Class ;
+    rdfs:label "Attribute" ;
+    rdfs:comment "Atributo elemental de un Digimon o movimiento (por ejemplo Fire, Water)" .
+
+
+
+
+
+# ------ Object Properties ------
+
+:hasMove rdf:type owl:ObjectProperty ;
+    rdfs:label "has move" ;
+    rdfs:comment "Relaciona un Digimon con un movimiento que puede usar" ;
+    rdfs:domain :Digimon ;
+    rdfs:range :Move .
+
+:hasSupportSkill rdf:type owl:ObjectProperty ;
+    rdfs:label "has support skill" ;
+    rdfs:comment "Relaciona un Digimon con su habilidad pasiva" ;
+    rdfs:domain :Digimon ;
+    rdfs:range :SupportSkill .
+
+:hasStage rdf:type owl:ObjectProperty ;
+    rdfs:label "has stage" ;
+    rdfs:comment "Indica el nivel evolutivo de un Digimon" ;
+    rdfs:domain :Digimon ;
+    rdfs:range :Stage .
+
+:hasType rdf:type owl:ObjectProperty ;
+    rdfs:label "has type" ;
+    rdfs:comment "Indica el tipo de un Digimon o movimiento" ;
+    rdfs:domain [
+        rdf:type owl:Class ;
+        owl:unionOf ( :Digimon :Move )
+    ] ;
+    rdfs:range :Type .
+
+:hasAttribute rdf:type owl:ObjectProperty ;
+    rdfs:label "has attribute" ;
+    rdfs:comment "Indica el atributo elemental de un Digimon o movimiento" ;
+    rdfs:domain [
+        rdf:type owl:Class ;
+        owl:unionOf ( :Digimon :Move )
+    ] ;
+    rdfs:range :Attribute .
+
+
+
+
+# ------ Datatype Properties ------
+
+:name rdf:type owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "Nombre de un movimiento o habilidad de soporte" ;
+    rdfs:range xsd:string .
+
+:power rdf:type owl:DatatypeProperty ;
+    rdfs:label "power" ;
+    rdfs:comment "Potencia de un movimiento" ;
+    rdfs:domain :Move ;
+    rdfs:range xsd:int .
+
+:hasHP rdf:type owl:DatatypeProperty ;
+    rdfs:label "has HP" ;
+    rdfs:comment "Puntos de vida de un Digimon" ;
+    rdfs:domain :Digimon ;
+    rdfs:range xsd:int .
+
+:hasSP rdf:type owl:DatatypeProperty ;
+    rdfs:label "has SP" ;
+    rdfs:comment "Puntos de energía de un Digimon" ;
+    rdfs:domain :Digimon ;
+    rdfs:range xsd:int .
+
+:hasATK rdf:type owl:DatatypeProperty ;
+    rdfs:label "has ATK" ;
+    rdfs:comment "Valor de ataque de un Digimon" ;
+    rdfs:domain :Digimon ;
+    rdfs:range xsd:int .
+
+:hasDEF rdf:type owl:DatatypeProperty ;
+    rdfs:label "has DEF" ;
+    rdfs:comment "Valor de defensa de un Digimon" ;
+    rdfs:domain :Digimon ;
+    rdfs:range xsd:int .
+
+:hasINT rdf:type owl:DatatypeProperty ;
+    rdfs:label "has INT" ;
+    rdfs:comment "Valor de inteligencia de un Digimon" ;
+    rdfs:domain :Digimon ;
+    rdfs:range xsd:int .
+
+:hasSPD rdf:type owl:DatatypeProperty ;
+    rdfs:label "has SPD" ;
+    rdfs:comment "Velocidad de un Digimon" ;
+    rdfs:domain :Digimon ;
+    rdfs:range xsd:int .
+
+
+
+
+# ------ Valores posibles de Stage, Type y Atribute------
+
+### Stage
+
+:Baby rdf:type :Stage ;
+    rdfs:label "Baby" ;
+    rdfs:comment "Etapa inicial de un Digimon" .
+
+:Rookie rdf:type :Stage ;
+    rdfs:label "Rookie" ;
+    rdfs:comment "Etapa básica de desarrollo de un Digimon" .
+
+:Champion rdf:type :Stage ;
+    rdfs:label "Champion" ;
+    rdfs:comment "Etapa intermedia de evolución" .
+
+:Ultimate rdf:type :Stage ;
+    rdfs:label "Ultimate" ;
+    rdfs:comment "Etapa avanzada de evolución" .
+
+:Mega rdf:type :Stage ;
+    rdfs:label "Mega" ;
+    rdfs:comment "Etapa máxima de evolución de un Digimon" .
+
+
+
+### Type
+
+:Free rdf:type :Type ;
+    rdfs:label "Free" ;
+    rdfs:comment "Tipo neutro sin ventaja ni desventaja clara" .
+
+:Vaccine rdf:type :Type ;
+    rdfs:label "Vaccine" ;
+    rdfs:comment "Tipo fuerte contra Virus" .
+
+:Virus rdf:type :Type ;
+    rdfs:label "Virus" ;
+    rdfs:comment "Tipo fuerte contra Data" .
+
+:Data rdf:type :Type ;
+    rdfs:label "Data" ;
+    rdfs:comment "Tipo fuerte contra Vaccine" .
+
+:Physical rdf:type :Type ;
+    rdfs:label "Physical" ;
+    rdfs:comment "Tipo de ataque físico" .
+
+:Magic rdf:type :Type ;
+    rdfs:label "Magic" ;
+    rdfs:comment "Tipo de ataque mágico" .
+
+
+
+### Attribute
+
+:Neutral rdf:type :Attribute ;
+    rdfs:label "Neutral" ;
+    rdfs:comment "Atributo sin afinidad elemental" .
+
+:Fire rdf:type :Attribute ;
+    rdfs:label "Fire" ;
+    rdfs:comment "Atributo de fuego" .
+
+:Water rdf:type :Attribute ;
+    rdfs:label "Water" ;
+    rdfs:comment "Atributo de agua" .
+
+:Plant rdf:type :Attribute ;
+    rdfs:label "Plant" ;
+    rdfs:comment "Atributo de tipo planta" .
+
+:Electric rdf:type :Attribute ;
+    rdfs:label "Electric" ;
+    rdfs:comment "Atributo eléctrico" .
+
+
+
+
+
+
+# ------Restricciones sobre algunas clases------
+
+### Todo digimon tiene que tener un stage
+
+:Digimon rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :hasStage ;
+    owl:someValuesFrom :Stage
+] .
+
+
+
+### Todo digimon debe tener un tipo
+
+:Digimon rdfs:subClassOf [
+    rdf:type owl:Restriction ;
+    owl:onProperty :hasType ;
+    owl:someValuesFrom :Type
+] .
