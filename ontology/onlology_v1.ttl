@@ -348,5 +348,5 @@
 :Digimon rdfs:subClassOf [
     rdf:type owl:Restriction ;
     owl:onProperty :hasType ;
-    owl:someValuesFrom :Type
+    owl:someValuesFrom :TypeDigi
 ] .
