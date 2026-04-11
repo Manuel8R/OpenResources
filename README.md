@@ -19,11 +19,10 @@
 ```text
 OpenResources/
 |
-|-- initial_dataset/
-|   |--DigiDB_digimonlist.csv 
-|   |--DigiDB_movelist.csv 
-|   |--DigiDB_supportlist.csv 
-|   |--digimon_additional_dataset.csv
+|-- Dataset/
+|   |--Dataset_AllPokemon.csv 
+|   |--Dataset_Pokedex.csv 
+|   |--PokemonDataSetOriginal.csv 
 |
 |-- ontology/
 |   |--ontology_vX.ttl
@@ -35,6 +34,12 @@ OpenResources/
 |-- README.md # Fichero readme
 
 ```
+---
+## Repositorios Dataset:
+    - Dataset_Pokedex: https://www.kaggle.com/datasets/takamasakato/pokemon-all-status-data
+    - Dataset_AllPokemon: https://www.kaggle.com/datasets/maca11/all-pokemon-dataset
+    - PokemonDataSetOriginal: https://www.kaggle.com/datasets/divyadeep/pokemon
+
 ---
 
 #### Última actualización del README
