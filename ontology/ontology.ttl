@@ -1,0 +1,109 @@
+@prefix : <http://example.org/def/base#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pk: <http://www.owl-ontologies.com/pk#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+pk:AprendeMovimiento a owl:ObjectProperty ;
+    rdfs:label "aprende movimiento" ;
+    rdfs:domain pk:Pokemon ;
+    rdfs:range pk:Movimiento .
+
+pk:E_SP_attack a owl:DatatypeProperty ;
+    rdfs:label "e_ s p_attack" .
+
+pk:E_SP_defense a owl:DatatypeProperty ;
+    rdfs:label "e_ s p_defense" .
+
+pk:E_attack a owl:DatatypeProperty ;
+    rdfs:label "e_attack" .
+
+pk:E_defense a owl:DatatypeProperty ;
+    rdfs:label "e_defense" .
+
+pk:E_speed a owl:DatatypeProperty ;
+    rdfs:label "e_speed" .
+
+pk:EsDeTipo a owl:ObjectProperty ;
+    rdfs:label "es de tipo" ;
+    rdfs:domain pk:Movimiento ;
+    rdfs:range pk:Tipo .
+
+pk:EvolucionaA a owl:ObjectProperty ;
+    rdfs:label "evoluciona a" ;
+    rdfs:domain pk:Pokemon ;
+    rdfs:range pk:Pokemon .
+
+pk:HP a owl:DatatypeProperty ;
+    rdfs:label "h p" .
+
+pk:Habilidad a owl:Class ;
+    rdfs:label "Habilidad" .
+
+pk:PokemonLegendario a owl:Class ;
+    rdfs:label "Pokemon Legendario" ;
+    rdfs:subClassOf pk:Pokemon .
+
+pk:SP_attack a owl:DatatypeProperty ;
+    rdfs:label "s p_attack" .
+
+pk:SP_defense a owl:DatatypeProperty ;
+    rdfs:label "s p_defense" .
+
+pk:TieneHabilidad a owl:ObjectProperty ;
+    rdfs:label "tiene habilidad" .
+
+pk:TieneMegaEvolucion a owl:ObjectProperty ;
+    rdfs:label "tiene mega evolucion" ;
+    rdfs:domain pk:Pokemon ;
+    rdfs:range pk:Pokemon .
+
+pk:TieneTipo a owl:ObjectProperty ;
+    rdfs:label "tiene tipo" ;
+    rdfs:range pk:Tipo .
+
+pk:Tipoexperiencia a owl:Class ;
+    rdfs:label "Tipoexperiencia" .
+
+pk:Total a owl:DatatypeProperty ;
+    rdfs:label "total" .
+
+pk:attack a owl:DatatypeProperty ;
+    rdfs:label "attack" .
+
+pk:defense a owl:DatatypeProperty ;
+    rdfs:label "defense" .
+
+pk:esDebilContra a owl:ObjectProperty ;
+    rdfs:label "es debil contra" ;
+    rdfs:domain pk:Tipo ;
+    rdfs:range pk:Pokemon .
+
+pk:esFuertecontra a owl:ObjectProperty ;
+    rdfs:label "es fuertecontra" ;
+    rdfs:domain pk:Tipo ;
+    rdfs:range pk:Pokemon .
+
+pk:perteneceAGrupoHuevo a owl:ObjectProperty ;
+    rdfs:label "pertenece a grupo huevo" ;
+    rdfs:domain pk:Pokemon ;
+    rdfs:range pk:Grupohuevo .
+
+pk:speed a owl:DatatypeProperty ;
+    rdfs:label "speed" .
+
+pk:Grupohuevo a owl:Class ;
+    rdfs:label "Grupohuevo" .
+
+pk:Movimiento a owl:Class ;
+    rdfs:label "Movimiento" .
+
+pk:Tipo a owl:Class ;
+    rdfs:label "Tipo" .
+
+pk:Pokemon a owl:Class ;
+    rdfs:label "Pokemon" .
+
