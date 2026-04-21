@@ -104,70 +104,104 @@ poke:tieneGeneracion rdf:type owl:ObjectProperty ;
 
 ## poke:hasHP
 poke:hasHP rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has h p" .
 
 ## poke:hasAttack
 poke:hasAttack rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+    	rdfs:range xsd:int ;
 		rdfs:label "has attack" .
 
 ## poke:hasDefense
 poke:hasDefense rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has defense" .
 
 ## poke:hasSpAttack
 poke:hasSpAttack rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has sp attack" .
 
 ## poke:hasSpDefense
 poke:hasSpDefense rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has sp defense" .
 
 ## poke:Speed
 poke:Speed rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "speed" .
 
 ## poke:hasBST
 poke:hasBST rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has b s t" .
 
 ## poke:hasHeight
 poke:hasHeight rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:float ;
 		rdfs:label "has height" .
 
 ## poke:hasWeight
 poke:hasWeight rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:float ;
 		rdfs:label "has weight" .
 
 ## poke:hasBMI
 poke:hasBMI rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:float ;
 		rdfs:label "has b m i" .
 
 ## poke:hasCatchRate
 poke:hasCatchRate rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has catch rate" .
 
 ## poke:isLegendary
 poke:isLegendary rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:boolean ;
 		rdfs:label "is legendary" .
 
 ## poke:hasGenderMaleRatio
 poke:hasGenderMaleRatio rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:float ;
 		rdfs:label "has gender male ratio" .
 
 ## poke:hasGenderFemaleRatio
 poke:hasGenderFemaleRatio rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:float ;
 		rdfs:label "has gender female ratio" .
 
 ## poke:hasBaseExperience
 poke:hasBaseExperience rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has base experience" .
 
 ## poke:hasExpToLvl100
 poke:hasExpToLvl100 rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has exp to lvl100" .
 
 ## poke:hasEggSteps
 poke:hasEggSteps rdf:type owl:DatatypeProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range xsd:int ;
 		rdfs:label "has egg steps" .
 
 #################################
