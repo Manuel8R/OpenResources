@@ -14,37 +14,34 @@
 # 5. EL mismo pokemon no puede ser de dos generaciones distintas
 # 6. El pokemon no puede ser de dos formas distintas
 # 7. Todo pokemon tiene que tener nivel y estar entre (0, 100]
-# 8. Ningun valor de las estadisticas base puede ser 0<=
+# 8. Ningun valor de las estadisticas base puede ser <=0
 #############################################################
 
 #-----------------------------------------------------------
 # 1. Si es evolucion final evoluciona de otro
-#    - Si un Pokémon está marcado como evolución final (true),
-#      no puede poseer una propiedad que apunte a una evolución posterior.
+#    - Si un Pokémon esta marcado como evolucion final, no puede tener una evolucion posterior.
 #-----------------------------------------------------------
 pokemon:PokemonFinalEvolutionShape
     a sh:NodeShape ;
     sh:targetClass pokemon:Pokemon ;
     rdfs:label "Lógica de evolución final" ;
 
-    sh:sparql [
-        sh:message "Un Pokémon marcado como evolución final no puede tener el campo 'evolucionaA'." ;
-        sh:prefixes [
-            sh:declare [ sh:prefix "pokemon" ; sh:namespace "http://example.org/pokemon#"^^xsd:anyURI ] ;
-        ] ;
-        sh:select """
-            SELECT $this
-            WHERE {
-                $this pokemon:esEvolucionFinal true .
-                $this pokemon:evolucionaA ?next .
-            }
-        """ ;
+    sh:property [
+        sh:path pokemon:esEvolucionFinal ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+        sh:message "esEvolucionFinal debe ser un valor booleano único." ;
+    ] ;
+
+    sh:property [
+        sh:path pokemon:evolucionaA ;
+        sh:nodeKind sh:IRI ;
+        sh:message "El campo evolucionaA debe ser un recurso (IRI) válido." ;
     ] .
 
 #-----------------------------------------------------------
 # 2. Si tiene moviento tiene que ser del tipo movimiento
-#    - Si un Pokémon tiene movimientos asociados, estos deben
-#      ser obligatoriamente instancias de la clase pokemon:Movimiento.
+#    - Un pokemon que tiene movimiento tiene que existir dentro de la clase: Movimiento
 #-----------------------------------------------------------
 pokemon:PokemonMovementClassShape
     a sh:NodeShape ;
@@ -58,34 +55,25 @@ pokemon:PokemonMovementClassShape
         sh:message "Cualquier objeto en 'tieneMovimiento' debe ser un IRI de la clase pokemon:Movimiento." ;
     ] .
 
+
 #-----------------------------------------------------------
 # 3. Que no puede ser el tipo principal y el secundario igual
-#    - Un Pokémon no puede tener el mismo tipo asignado como
-#      primario y secundario simultáneamente.
+#    - Un pokemon no puede tener el mismo tipo asignado como primario y secundario.
 #-----------------------------------------------------------
 pokemon:PokemonDistinctTypeShape
     a sh:NodeShape ;
     sh:targetClass pokemon:Pokemon ;
     rdfs:label "Unicidad de tipos primario y secundario" ;
 
-    sh:sparql [
-        sh:message "El tipo primario y el tipo secundario no pueden ser idénticos." ;
-        sh:prefixes [
-            sh:declare [ sh:prefix "pokemon" ; sh:namespace "http://example.org/pokemon#"^^xsd:anyURI ] ;
-        ] ;
-        sh:select """
-            SELECT $this ?tipo
-            WHERE {
-                $this pokemon:tieneTipoPrimario ?tipo ;
-                      pokemon:tieneTipoSecundario ?tipo .
-            }
-        """ ;
+    sh:property [
+        sh:path pokemon:tieneTipoPrimario ;
+        sh:disjoint pokemon:tieneTipoSecundario ;
+        sh:message "El tipo primario no puede ser igual al tipo secundario." ;
     ] .
 
 #-----------------------------------------------------------
 # 4. El tipo tiene que estar en la lista
-#    - El valor de los tipos debe pertenecer estrictamente a la
-#      enumeración de los 18 tipos oficiales de la franquicia.
+#    - El valor de los tipos debe pertenecer estrictamente a la lista de tipos
 #-----------------------------------------------------------
 pokemon:PokemonAllowedTypesShape
     a sh:NodeShape ;
@@ -93,30 +81,38 @@ pokemon:PokemonAllowedTypesShape
     rdfs:label "Tipos permitidos (lista cerrada)" ;
 
     sh:property [
-        sh:path ( pokemon:tieneTipoPrimario pokemon:tieneTipoSecundario ) ;
+        sh:path pokemon:tieneTipoPrimario ;
         sh:in ( "Grass" "Poison" "Fire" "Flying" "Water" "Bug" "Normal" "Electric" "Ground" "Fairy" "Fighting" "Psychic" "Rock" "Steel" "Ice" "Ghost" "Dragon" "Dark" ) ;
-        sh:message "El tipo asignado no es un tipo Pokémon válido." ;
+        sh:minCount 1 ;
+        sh:message "Debe tener un tipo primario de la lista ." ;
+    ] ;
+
+    sh:property [
+        sh:path pokemon:tieneTipoSecundario ;
+        sh:in ( "Grass" "Poison" "Fire" "Flying" "Water" "Bug" "Normal" "Electric" "Ground" "Fairy" "Fighting" "Psychic" "Rock" "Steel" "Ice" "Ghost" "Dragon" "Dark" ) ;
+        sh:maxCount 1 ;
+        sh:message "El tipo secundario y si existe debe ser de la lista ." ;
     ] .
 
 #-----------------------------------------------------------
 # 5. EL mismo pokemon no puede ser de dos generaciones distintas
-#    - Un Pokémon debe pertenecer a una única generación.
+#    - Un pokemon debe pertenecer a una unica generación.
 #-----------------------------------------------------------
 pokemon:PokemonSingleGenerationShape
     a sh:NodeShape ;
     sh:targetClass pokemon:Pokemon ;
-    rdfs:label "Cardinalidad de generación" ;
+    rdfs:label "Cardinalidad de generacion" ;
 
     sh:property [
         sh:path pokemon:perteneceAGeneracion ;
         sh:maxCount 1 ;
         sh:minCount 1 ;
-        sh:message "Cada Pokémon debe estar asociado exactamente a una generación." ;
+        sh:message "Cada pokemon debe estar asociado exactamente a una generacion." ;
     ] .
 
 #-----------------------------------------------------------
 # 6. El pokemon no puede ser de dos formas distintas
-#    - Cada registro de Pokémon debe representar una única forma.
+#    - Un pokemon no puede tener dos formas distinas a la vez
 #-----------------------------------------------------------
 pokemon:PokemonSingleFormShape
     a sh:NodeShape ;
@@ -126,12 +122,12 @@ pokemon:PokemonSingleFormShape
     sh:property [
         sh:path pokemon:nombreForma ;
         sh:maxCount 1 ;
-        sh:message "No se permite definir más de una forma para un mismo recurso Pokémon." ;
+        sh:message "No se permite más de una forma para un mismo recurso Pokémon." ;
     ] .
 
 #-----------------------------------------------------------
 # 7. Todo pokemon tiene que tener nivel y estar entre (0, 100]
-#    - El nivel es obligatorio y debe ser un entero en el rango (0, 100].
+#    - El nivel es un entero en el rango (0, 100].
 #-----------------------------------------------------------
 pokemon:PokemonLevelShape
     a sh:NodeShape ;
@@ -143,11 +139,11 @@ pokemon:PokemonLevelShape
         sh:datatype xsd:integer ;
         sh:minInclusive 1 ;
         sh:maxInclusive 100 ;
-        sh:message "El nivel debe ser un número entero entre 1 y 100." ;
+        sh:message "El nivel debe ser un numero entero entre 1 y 100." ;
     ] .
 
 #-----------------------------------------------------------
-# 8. Ningun valor de las estadisticas base puede ser 0<=
+# 8. Ningun valor de las estadisticas base puede ser <=0
 #    - Ninguna estadística base (HP, Ataque, Defensa, etc.) puede
 #      ser igual o inferior a cero.
 #-----------------------------------------------------------
@@ -156,8 +152,44 @@ pokemon:PokemonBaseStatsPositiveShape
     sh:targetClass pokemon:Pokemon ;
     rdfs:label "Validación de estadísticas positivas" ;
 
-    sh:property [
-        sh:path ( pokemon:hp pokemon:attack pokemon:defense pokemon:spAtk pokemon:spDef pokemon:speed ) ;
+   sh:property [
+        sh:path pokemon:hp ;
         sh:minInclusive 1 ;
-        sh:message "Las estadísticas base deben ser siempre mayores o iguales a 1." ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadística hp debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path pokemon:attack ;
+        sh:minInclusive 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadística attack debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path pokemon:defense ;
+        sh:minInclusive 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadística defense debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path pokemon:spAtk ;
+        sh:minInclusive 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadística spAtk debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path pokemon:spDef ;
+        sh:minInclusive 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadística spDef debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path pokemon:speed ;
+        sh:minInclusive 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadística speed debe ser al menos 1." ;
     ] .
