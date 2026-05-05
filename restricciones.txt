@@ -1,4 +1,8 @@
-1. Evoluciona a otro
+1. Si es evolucion final evoluciona de otro
 2. Si tiene moviento tiene que ser del tipo movimiento
 3. Que no puede ser el tipo principal y el secundario igual
 4. El tipo tiene que estar en la lista
+5. EL mismo pokemon no puede ser de dos generaciones distintas
+6. El pokemon no puede ser de dos formas distintas
+7. Todo pokemon tiene que tener nivel y estar entre (0, 100]
+8. Ningun valor de las estadisticas base puede ser 0<=
