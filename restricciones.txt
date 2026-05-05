@@ -1,0 +1,4 @@
+1. Evoluciona a otro
+2. Si tiene moviento tiene que ser del tipo movimiento
+3. Que no puede ser el tipo principal y el secundario igual
+4. El tipo tiene que estar en la lista
