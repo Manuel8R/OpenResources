@@ -25,7 +25,6 @@ OpenResources/
 |   |-- Dataset_AllPokemon.csv
 |
 |-- ontology/
-|   |-- onlology_v1.ttl
 |   |-- ontology_v2.ttl
 |   |-- ontologySchema.drawio
 |   |-- ontologySchema.xml
@@ -65,10 +64,10 @@ Hemos utilizado la IA para:
 
 - Pulir los casos de uso a partir de múltiples datasets, con el objetivo de reducir redundancias y mejorar su claridad.
 - Corregir y refinar los requisitos de la ontología para hacerlos más consistentes y mejor alineados con el dominio modelado.
-- Afinar y pulir formato del REAMDE.md
+- Afinar y pulir formato del README.md
 
 ---
 
 ## Última actualización del README
 
-21 de abril de 2026
+05 mayo de 2026
