@@ -1,0 +1,383 @@
+@prefix pokemon: <http://pokemon.ontology.com#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+#############################################################
+# Datos de ejemplo para validar las restricciones del shapes.ttl
+#
+# Este fichero contiene:
+# - Instancias conformes, que no deberian producir errores
+# - Instancias no conformes, creadas para activar resultados
+#   negativos en las distintas restricciones que hemos definido en shapes.ttl 
+#
+#############################################################
+
+
+########################
+# Clases principales
+########################
+
+pokemon:Pokemon    a rdfs:Class .
+pokemon:Movimiento a rdfs:Class .
+pokemon:Habilidad  a rdfs:Class .
+
+
+########################
+# Recursos reutilizables
+########################
+
+# Generaciones
+pokemon:Gen1 a pokemon:Generacion ;
+    rdfs:label "Generacion 1" .
+
+pokemon:Gen2 a pokemon:Generacion ;
+    rdfs:label "Generacion 2" .
+
+pokemon:Gen6 a pokemon:Generacion ;
+    rdfs:label "Generacion 6" .
+
+
+# Movimientos validos
+pokemon:VineWhip a pokemon:Movimiento ;
+    rdfs:label "Vine Whip" .
+
+pokemon:Ember a pokemon:Movimiento ;
+    rdfs:label "Ember" .
+
+pokemon:WaterGun a pokemon:Movimiento ;
+    rdfs:label "Water Gun" .
+
+pokemon:Thunderbolt a pokemon:Movimiento ;
+    rdfs:label "Thunderbolt" .
+
+pokemon:RazorLeaf a pokemon:Movimiento ;
+    rdfs:label "Razor Leaf" .
+
+
+# Recurso usado como movimiento incorrecto.
+pokemon:Overgrow a pokemon:Habilidad ;
+    rdfs:label "Overgrow" .
+
+
+#############################################################
+# A) Pokemon conformes (para obtener resultado positivos)
+#############################################################
+
+pokemon:Bulbasaur a pokemon:Pokemon ;
+    pokemon:nombreForma "Bulbasaur" ;
+    pokemon:tieneTipoPrimario "Grass" ;
+    pokemon:tieneTipoSecundario "Poison" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 16 ;
+    pokemon:hp 45 ;
+    pokemon:attack 49 ;
+    pokemon:defense 49 ;
+    pokemon:spAtk 65 ;
+    pokemon:spDef 65 ;
+    pokemon:speed 45 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:evolucionaA pokemon:Ivysaur ;
+    pokemon:tieneMovimiento pokemon:VineWhip .
+
+pokemon:Ivysaur a pokemon:Pokemon ;
+    pokemon:nombreForma "Ivysaur" ;
+    pokemon:tieneTipoPrimario "Grass" ;
+    pokemon:tieneTipoSecundario "Poison" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 32 ;
+    pokemon:hp 60 ;
+    pokemon:attack 62 ;
+    pokemon:defense 63 ;
+    pokemon:spAtk 80 ;
+    pokemon:spDef 80 ;
+    pokemon:speed 60 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:evolucionaA pokemon:Venusaur ;
+    pokemon:tieneMovimiento pokemon:RazorLeaf .
+
+pokemon:Venusaur a pokemon:Pokemon ;
+    pokemon:nombreForma "Venusaur" ;
+    pokemon:tieneTipoPrimario "Grass" ;
+    pokemon:tieneTipoSecundario "Poison" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 50 ;
+    pokemon:hp 80 ;
+    pokemon:attack 82 ;
+    pokemon:defense 83 ;
+    pokemon:spAtk 100 ;
+    pokemon:spDef 100 ;
+    pokemon:speed 80 ;
+    pokemon:esEvolucionFinal true ;
+    pokemon:tieneMovimiento pokemon:RazorLeaf .
+
+pokemon:Charmander a pokemon:Pokemon ;
+    pokemon:nombreForma "Charmander" ;
+    pokemon:tieneTipoPrimario "Fire" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 14 ;
+    pokemon:hp 39 ;
+    pokemon:attack 52 ;
+    pokemon:defense 43 ;
+    pokemon:spAtk 60 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 65 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:evolucionaA pokemon:Charmeleon ;
+    pokemon:tieneMovimiento pokemon:Ember .
+
+pokemon:Squirtle a pokemon:Pokemon ;
+    pokemon:nombreForma "Squirtle" ;
+    pokemon:tieneTipoPrimario "Water" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 12 ;
+    pokemon:hp 44 ;
+    pokemon:attack 48 ;
+    pokemon:defense 65 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 64 ;
+    pokemon:speed 43 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:evolucionaA pokemon:Wartortle ;
+    pokemon:tieneMovimiento pokemon:WaterGun .
+
+pokemon:Pikachu a pokemon:Pokemon ;
+    pokemon:nombreForma "Pikachu" ;
+    pokemon:tieneTipoPrimario "Electric" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 25 ;
+    pokemon:hp 35 ;
+    pokemon:attack 55 ;
+    pokemon:defense 40 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 90 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:evolucionaA pokemon:Raichu ;
+    pokemon:tieneMovimiento pokemon:Thunderbolt .
+
+
+#############################################################
+# B) Pokemon no conformes (para producir erorres)
+#############################################################
+
+# B1. Violamos PokemonFinalEvolutionShape:
+# esEvolucionFinal debe ser booleano.
+pokemon:Bad_EvolucionFinalNoBooleana a pokemon:Pokemon ;
+    pokemon:nombreForma "BadEvolucionFinalNoBooleana" ;
+    pokemon:tieneTipoPrimario "Fire" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 30 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal "si" ;
+    pokemon:tieneMovimiento pokemon:Ember .
+
+
+# B2. Violamos PokemonFinalEvolutionShape:
+# evolucionaA debe apuntar a un IRI, no a un literal.
+pokemon:Bad_EvolucionaALiteral a pokemon:Pokemon ;
+    pokemon:nombreForma "BadEvolucionaALiteral" ;
+    pokemon:tieneTipoPrimario "Water" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 18 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:evolucionaA "Wartortle" ;
+    pokemon:tieneMovimiento pokemon:WaterGun .
+
+
+# B3. Violamos PokemonMovementClassShape:
+# tieneMovimiento apunta a una habilidad, no a un Movimiento.
+pokemon:Bad_MovimientoNoEsMovimiento a pokemon:Pokemon ;
+    pokemon:nombreForma "BadMovimientoNoEsMovimiento" ;
+    pokemon:tieneTipoPrimario "Grass" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:Overgrow .
+
+
+# B4. Violamos PokemonDistinctTypeShape:
+# el tipo primario y secundario son iguales.
+pokemon:Bad_TiposIguales a pokemon:Pokemon ;
+    pokemon:nombreForma "BadTiposIguales" ;
+    pokemon:tieneTipoPrimario "Fire" ;
+    pokemon:tieneTipoSecundario "Fire" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:Ember .
+
+
+# B5. Violamos PokemonAllowedTypesShape:
+# "Sound" no esta en la lista cerrada de tipos permitidos.
+pokemon:Bad_TipoPrimarioNoPermitido a pokemon:Pokemon ;
+    pokemon:nombreForma "BadTipoPrimarioNoPermitido" ;
+    pokemon:tieneTipoPrimario "Sound" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:Ember .
+
+
+# B6. Violamos PokemonAllowedTypesShape:
+# falta el tipo primario obligatorio.
+pokemon:Bad_SinTipoPrimario a pokemon:Pokemon ;
+    pokemon:nombreForma "BadSinTipoPrimario" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:Ember .
+
+
+# B7. Violamos PokemonSingleGenerationShape:
+# el mismo Pokemon pertenece a dos generaciones.
+pokemon:Bad_DosGeneraciones a pokemon:Pokemon ;
+    pokemon:nombreForma "BadDosGeneraciones" ;
+    pokemon:tieneTipoPrimario "Psychic" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1, pokemon:Gen2 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:Thunderbolt .
+
+
+# B8. Violamos PokemonSingleGenerationShape:
+# falta la generacion obligatoria.
+pokemon:Bad_SinGeneracion a pokemon:Pokemon ;
+    pokemon:nombreForma "BadSinGeneracion" ;
+    pokemon:tieneTipoPrimario "Psychic" ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:Thunderbolt .
+
+
+# B9. Violamos PokemonSingleFormShape:
+# no se permite mas de una forma para un mismo recurso.
+pokemon:Bad_DosFormas a pokemon:Pokemon ;
+    pokemon:nombreForma "FormaNormal", "FormaRegional" ;
+    pokemon:tieneTipoPrimario "Dragon" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:RazorLeaf .
+
+
+# B10. Violamos PokemonLevelShape:
+# el nivel debe estar entre 1 y 100.
+pokemon:Bad_NivelFueraDeRango a pokemon:Pokemon ;
+    pokemon:nombreForma "BadNivelFueraDeRango" ;
+    pokemon:tieneTipoPrimario "Ice" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 101 ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:RazorLeaf .
+
+
+# B11. Violamos PokemonLevelShape:
+# el nivel debe ser un entero.
+pokemon:Bad_NivelNoEntero a pokemon:Pokemon ;
+    pokemon:nombreForma "BadNivelNoEntero" ;
+    pokemon:tieneTipoPrimario "Ice" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel "alto" ;
+    pokemon:hp 50 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:RazorLeaf .
+
+
+# B12. Violamos PokemonBaseStatsPositiveShape:
+# hp debe ser un entero positivo.
+pokemon:Bad_HPNoPositivo a pokemon:Pokemon ;
+    pokemon:nombreForma "BadHPNoPositivo" ;
+    pokemon:tieneTipoPrimario "Rock" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 0 ;
+    pokemon:attack 50 ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:RazorLeaf .
+
+
+# B13. Violamos PokemonBaseStatsPositiveShape:
+# attack debe ser entero, no texto.
+pokemon:Bad_AttackNoEntero a pokemon:Pokemon ;
+    pokemon:nombreForma "BadAttackNoEntero" ;
+    pokemon:tieneTipoPrimario "Fighting" ;
+    pokemon:perteneceAGeneracion pokemon:Gen1 ;
+    pokemon:nivel 20 ;
+    pokemon:hp 50 ;
+    pokemon:attack "mucho" ;
+    pokemon:defense 50 ;
+    pokemon:spAtk 50 ;
+    pokemon:spDef 50 ;
+    pokemon:speed 50 ;
+    pokemon:esEvolucionFinal false ;
+    pokemon:tieneMovimiento pokemon:RazorLeaf .
+
