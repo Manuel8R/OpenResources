@@ -55,6 +55,7 @@ Los datasets que hemos usado están relacionados con Pokemon y vienen de las sig
 - `OpenResources/ontology/ontology_v2.ttl`: versión actual de la ontología en Turtle.
 - `OpenResources/ontology/ontologySchema.drawio`: esquema conceptual de la ontología.
 - `OpenResources/ontology/ontologySchema.xml`: exportación del esquema.
+- `OpenResources/SHACL/ : Restricciones de los datos, datos de muestra correctos e invalidos y un report de su funcionamiento.
 
 ---
 
@@ -65,9 +66,10 @@ Hemos utilizado la IA para:
 - Pulir los casos de uso a partir de múltiples datasets, con el objetivo de reducir redundancias y mejorar su claridad.
 - Corregir y refinar los requisitos de la ontología para hacerlos más consistentes y mejor alineados con el dominio modelado.
 - Afinar y pulir formato del README.md
+- Realizar cambios simples pero que supone una molestia (sustituir el prefijo pokemon: por poke:)
 
 ---
 
 ## Última actualización del README
 
-05 mayo de 2026
+07 mayo de 2026
