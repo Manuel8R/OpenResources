@@ -28,13 +28,13 @@ Restringe `poke:tieneMovimiento` a instancias de la clase `poke:Movimiento`.
 Impide que un Pokémon tenga el mismo tipo como primario y secundario.
 
 ### 4. `poke:PokemonAllowedTypesShape`
-Limita los tipos Pokémon a un conjunto cerrado de valores válidos (Grass, Fire, Water, Electric, etc.).
+Limita los tipos Pokémon a un conjunto cerrado de valores válidos predefinidos (Grass, Fire, Water, Electric, etc.).
 
 ### 5. `poke:PokemonSingleGenerationShape`
 Garantiza que cada Pokémon pertenece a una única generación.
 
 ### 6. `poke:PokemonSingleFormShape`
-Restringe a un máximo de una forma regional por Pokémon.
+Restringe a un máximo de una forma simultanea regional por Pokémon.
 
 ### 7. `poke:PokemonExpShape`
 Obliga a que la experiencia necesaria para llegar al nivel 100 sea un entero mayor o igual a 1.
