@@ -19,7 +19,7 @@
 
 #-----------------------------------------------------------
 # 1. Si es evolucion final no evoluciona mas
-#    - Si un Pokémon esta marcado como evolucion final, no puede tener una evolucion posterior.
+#    - Si un pokemon esta marcado como evolucion final, no puede tener una evolucion posterior.
 #-----------------------------------------------------------
 poke:PokemonFinalEvolutionShape
     a sh:NodeShape ;
@@ -45,7 +45,7 @@ poke:PokemonFinalEvolutionShape
 poke:PokemonMovementClassShape
     a sh:NodeShape ;
     sh:targetClass poke:Pokemon ;
-    rdfs:label "Validación de clase para movimientos" ;
+    rdfs:label "Validacion de clase para movimientos" ;
 
     sh:property [
         sh:path poke:tieneMovimiento ;
@@ -62,7 +62,7 @@ poke:PokemonMovementClassShape
 poke:PokemonDistinctTypeShape
     a sh:NodeShape ;
     sh:targetClass poke:Pokemon ;
-    rdfs:label "Unicidad de tipos primario y secundario" ;
+    rdfs:label "Unico tipo primario y secundario" ;
 
     sh:property [
         sh:path poke:tieneTipoPrimario ;
@@ -106,7 +106,7 @@ poke:PokemonAllowedTypesShape
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
 
-        sh:message "Debe tener un tipo primario válido." ;
+        sh:message "Debe tener un tipo primario valido." ;
     ] ;
 
     sh:property [
@@ -136,12 +136,12 @@ poke:PokemonAllowedTypesShape
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
 
-        sh:message "El tipo secundario debe ser válido." ;
+        sh:message "El tipo secundario debe ser valido." ;
     ] .
 
 #-----------------------------------------------------------
 # 5. EL mismo pokemon no puede ser de dos generaciones distintas
-#    - Un pokemon debe pertenecer a una unica generación.
+#    - Un pokemon debe pertenecer a una unica generacion.
 #-----------------------------------------------------------
 poke:PokemonSingleGenerationShape
     a sh:NodeShape ;
@@ -152,7 +152,7 @@ poke:PokemonSingleGenerationShape
         sh:path poke:tieneGeneracion ;
         sh:maxCount 1 ;
         sh:minCount 1 ;
-        sh:message "Cada pokemon debe estar asociado exactamente a una generacion." ;
+        sh:message "Cada pokemon debe ser exactamente de una generacion." ;
     ] .
 
 #-----------------------------------------------------------
@@ -167,7 +167,7 @@ poke:PokemonSingleFormShape
     sh:property [
         sh:path poke:tieneFormaRegional ;
         sh:maxCount 1 ;
-        sh:message "No se permite más de una forma para un mismo recurso Pokémon." ;
+        sh:message "No se permite mas de una forma para un mismo pokemon." ;
     ] .
 
 #-----------------------------------------------------------
@@ -189,20 +189,19 @@ poke:PokemonExpShape
 
 #-----------------------------------------------------------
 # 8. Ningun valor de las estadisticas base puede ser <=0
-#    - Ninguna estadística base (HP, Ataque, Defensa, etc.) puede
-#      ser igual o inferior a cero.
+#    - Ninguna estadistica base (HP, Ataque, Defensa, etc.) puede ser igual o inferior a cero.
 #-----------------------------------------------------------
 poke:PokemonBaseStatsPositiveShape
     a sh:NodeShape ;
     sh:targetClass poke:Pokemon ;
-    rdfs:label "Validación de estadísticas positivas" ;
+    rdfs:label "Validacion de estadisticas positivas" ;
 
    sh:property [
         sh:path poke:hasHP ;
         sh:minInclusive 1 ;
         sh:minCount 1 ;
         sh:datatype xsd:integer ;
-        sh:message "La estadística hp debe ser al menos 1." ;
+        sh:message "La estadistica hp debe ser al menos 1." ;
     ] ;
 
     sh:property [
@@ -210,7 +209,7 @@ poke:PokemonBaseStatsPositiveShape
         sh:minInclusive 1 ;
         sh:minCount 1 ;
         sh:datatype xsd:integer ;
-        sh:message "La estadística attack debe ser al menos 1." ;
+        sh:message "La estadistica attack debe ser al menos 1." ;
     ] ;
 
     sh:property [
@@ -218,7 +217,7 @@ poke:PokemonBaseStatsPositiveShape
         sh:minInclusive 1 ;
         sh:minCount 1 ;
         sh:datatype xsd:integer ;
-        sh:message "La estadística defense debe ser al menos 1." ;
+        sh:message "La estadistica defense debe ser al menos 1." ;
     ] ;
 
     sh:property [
@@ -226,7 +225,7 @@ poke:PokemonBaseStatsPositiveShape
         sh:minInclusive 1 ;
         sh:minCount 1 ;
         sh:datatype xsd:integer ;
-        sh:message "La estadística spAtk debe ser al menos 1." ;
+        sh:message "La estadistica spAtk debe ser al menos 1." ;
     ] ;
 
     sh:property [
@@ -234,7 +233,7 @@ poke:PokemonBaseStatsPositiveShape
         sh:minInclusive 1 ;
         sh:minCount 1 ;
         sh:datatype xsd:integer ;
-        sh:message "La estadística spDef debe ser al menos 1." ;
+        sh:message "La estadistica spDef debe ser al menos 1." ;
     ] ;
 
     sh:property [
@@ -242,5 +241,5 @@ poke:PokemonBaseStatsPositiveShape
         sh:minInclusive 1 ;
         sh:minCount 1 ;
         sh:datatype xsd:integer ;
-        sh:message "La estadística speed debe ser al menos 1." ;
+        sh:message "La estadistica speed debe ser al menos 1." ;
     ] .
