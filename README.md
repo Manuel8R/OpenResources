@@ -29,6 +29,12 @@ OpenResources/
 |   |-- ontologySchema.drawio
 |   |-- ontologySchema.xml
 |
+|-- SHACL/
+|   |-- shapes.ttl
+|   |-- datos.ttl
+|   |-- reportShacl.ttl
+|   |-- report.md
+|
 |-- OntologyRequirements.csv
 |-- Casos de uso.pdf
 |-- AtributosDescartados.pdf
@@ -55,7 +61,7 @@ Los datasets que hemos usado están relacionados con Pokemon y vienen de las sig
 - `OpenResources/ontology/ontology_v2.ttl`: versión actual de la ontología en Turtle.
 - `OpenResources/ontology/ontologySchema.drawio`: esquema conceptual de la ontología.
 - `OpenResources/ontology/ontologySchema.xml`: exportación del esquema.
-- `OpenResources/SHACL/ : Restricciones de los datos, datos de muestra correctos e invalidos y un report de su funcionamiento.
+- `OpenResources/SHACL/`: restricciones de los datos, datos de muestra correctos e inválidos y un report de su funcionamiento.
 
 ---
 
@@ -72,4 +78,4 @@ Hemos utilizado la IA para:
 
 ## Última actualización del README
 
-07 mayo de 2026
+08 mayo de 2026
