@@ -99,6 +99,21 @@ poke:evolucionaA poke:Wartortle .
 ```
 
 ---
+#### `poke:Bad_EvolucionFinalConEvolucion`
+
+Este caso comprueba la regla semántica principal de la shape: un Pokémon marcado como evolución final no puede tener una evolución posterior mediante `poke:evolucionaA`.
+
+| Problema | Restricción incumplida | Corrección |
+|----------|------------------------|------------|
+| Evolución final con evolución posterior | `sh:not` | Eliminar `poke:evolucionaA` o marcar `esEvolucionFinal` como `false` |
+
+Ejemplo de corrección:
+
+```ttl
+poke:esEvolucionFinal true .
+```
+
+---
 
 ### 3.2 Errores en movimientos
 
@@ -251,7 +266,9 @@ El conjunto de shapes presenta una buena cobertura del dominio modelado, ya que:
 
 ### 4.3 Conclusión general
 
-No ha sido necesario realizar modificaciones en el fichero `shapes.ttl`, ya que todos los errores detectados provienen del conjunto de datos de prueba (`datos.ttl`), el cual fue diseñado intencionadamente para contener inconsistencias.
+Durante la revisión se detectó que `poke:PokemonFinalEvolutionShape` no cubría correctamente todos los casos negativos documentados. Por ello, se ajustó la shape para validar explícitamente que `poke:esEvolucionFinal` sea booleano, que `poke:evolucionaA` apunte a un IRI y que un Pokémon marcado como evolución final no tenga evolución posterior.
+
+También se añadió el caso negativo `poke:Bad_EvolucionFinalConEvolucion` para comprobar directamente la restricción lógica de evolución final.
 
 Por tanto, se puede concluir que:
 

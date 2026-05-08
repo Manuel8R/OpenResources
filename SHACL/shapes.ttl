@@ -7,7 +7,7 @@
 #############################################################
 # Shapes para cada clase en los dataset validando evoluciones,
 # tipos, generaciones, movimientos y estadísticas base:
-# 1. Si es evolucion final evoluciona de otro
+# 1. Si es evolucion final no evoluciona a otro
 # 2. Si tiene moviento tiene que ser del tipo movimiento
 # 3. Que no puede ser el tipo principal y el secundario igual
 # 4. El tipo tiene que estar en la lista
@@ -26,15 +26,26 @@ poke:PokemonFinalEvolutionShape
     sh:targetClass poke:Pokemon ;
     rdfs:label "Si es evolucion final no puede evolucionar mas" ;
 
+    sh:property [
+        sh:path poke:esEvolucionFinal ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+        sh:message "esEvolucionFinal debe ser un valor booleano." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:evolucionaA ;
+        sh:nodeKind sh:IRI ;
+        sh:message "evolucionaA debe apuntar a un IRI de Pokemon, no a un literal." ;
+    ] ;
+
     sh:not [
         sh:property [
             sh:path poke:esEvolucionFinal ;
-            sh:datatype xsd:boolean ;
             sh:hasValue true ;
         ] ;
         sh:property [
             sh:path poke:evolucionaA ;
-            sh:nodeKind sh:IRI ;
             sh:minCount 1 ;
         ]
     ] .

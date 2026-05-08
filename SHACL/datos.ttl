@@ -202,7 +202,24 @@ poke:Bad_EvolucionaALiteral a poke:Pokemon ;
     poke:tieneMovimiento poke:WaterGun .
 
 
-# B3. Violamos PokemonMovementClassShape:
+# B3. Violamos PokemonFinalEvolutionShape:
+# un Pokemon marcado como evolucion final no puede tener evolucion posterior.
+poke:Bad_EvolucionFinalConEvolucion a poke:Pokemon ;
+    poke:tieneTipoPrimario poke:Fire ;
+    poke:tieneGeneracion poke:Gen1 ;
+    poke:hasHP 60 ;
+    poke:hasAttack 62 ;
+    poke:hasDefense 63 ;
+    poke:hasSpAttack 80 ;
+    poke:hasSpDefense 80 ;
+    poke:hasSpeed 60 ;
+    poke:hasExpToLvl100 1059860 ;
+    poke:esEvolucionFinal true ;
+    poke:evolucionaA poke:Charizard ;
+    poke:tieneMovimiento poke:Ember .
+
+
+# B4. Violamos PokemonMovementClassShape:
 # tieneMovimiento apunta a una habilidad, no a un Movimiento.
 poke:Bad_MovimientoNoEsMovimiento a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Grass ;
@@ -219,7 +236,7 @@ poke:Bad_MovimientoNoEsMovimiento a poke:Pokemon ;
     poke:tieneMovimiento poke:Overgrow .
 
 
-# B4. Violamos PokemonDistinctTypeShape:
+# B5. Violamos PokemonDistinctTypeShape:
 # el tipo primario y secundario son iguales.
 poke:Bad_TiposIguales a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Fire ;
@@ -236,7 +253,7 @@ poke:Bad_TiposIguales a poke:Pokemon ;
     poke:tieneMovimiento poke:Ember .
 
 
-# B5. Violamos PokemonAllowedTypesShape:
+# B6. Violamos PokemonAllowedTypesShape:
 # "Sound" no esta en la lista cerrada de tipos permitidos.
 poke:Bad_TipoPrimarioNoPermitido a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Sound ;
@@ -252,7 +269,7 @@ poke:Bad_TipoPrimarioNoPermitido a poke:Pokemon ;
     poke:tieneMovimiento poke:Ember .
 
 
-# B6. Violamos PokemonAllowedTypesShape:
+# B7. Violamos PokemonAllowedTypesShape:
 # falta el tipo primario obligatorio.
 poke:Bad_SinTipoPrimario a poke:Pokemon ;
     poke:tieneGeneracion poke:Gen1 ;
@@ -267,7 +284,7 @@ poke:Bad_SinTipoPrimario a poke:Pokemon ;
     poke:tieneMovimiento poke:Ember .
 
 
-# B7. Violamos PokemonSingleGenerationShape:
+# B8. Violamos PokemonSingleGenerationShape:
 # el mismo Pokemon pertenece a dos generaciones.
 poke:Bad_DosGeneraciones a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Psychic ;
@@ -283,7 +300,7 @@ poke:Bad_DosGeneraciones a poke:Pokemon ;
     poke:tieneMovimiento poke:Thunderbolt .
 
 
-# B8. Violamos PokemonSingleGenerationShape:
+# B9. Violamos PokemonSingleGenerationShape:
 # falta la generacion obligatoria.
 poke:Bad_SinGeneracion a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Psychic ;
@@ -298,7 +315,7 @@ poke:Bad_SinGeneracion a poke:Pokemon ;
     poke:tieneMovimiento poke:Thunderbolt .
 
 
-# B9. Violamos PokemonSingleFormShape:
+# B10. Violamos PokemonSingleFormShape:
 # no se permite mas de una forma para un mismo recurso.
 poke:Bad_DosFormas a poke:Pokemon ;
     poke:tieneFormaRegional poke:FormaNormal, poke:FormaRegional ;
@@ -315,7 +332,7 @@ poke:Bad_DosFormas a poke:Pokemon ;
     poke:tieneMovimiento poke:RazorLeaf .
 
 
-# B10. Violamos PokemonExpShape:
+# B11. Violamos PokemonExpShape:
 # la experiencia para alcanzar el nivel 100 debe ser mayor a 0.
 poke:Bad_NivelFueraDeRango a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Ice ;
@@ -331,7 +348,7 @@ poke:Bad_NivelFueraDeRango a poke:Pokemon ;
     poke:tieneMovimiento poke:RazorLeaf .
 
 
-# B11. Violamos PokemonExpShape:
+# B12. Violamos PokemonExpShape:
 # el nivel debe ser un entero.
 poke:Bad_NivelNoEntero a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Ice ;
@@ -347,7 +364,7 @@ poke:Bad_NivelNoEntero a poke:Pokemon ;
     poke:tieneMovimiento poke:RazorLeaf .
 
 
-# B12. Violamos PokemonBaseStatsPositiveShape:
+# B13. Violamos PokemonBaseStatsPositiveShape:
 # hp debe ser un entero positivo.
 poke:Bad_HPNoPositivo a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Rock ;
@@ -363,7 +380,7 @@ poke:Bad_HPNoPositivo a poke:Pokemon ;
     poke:tieneMovimiento poke:RazorLeaf .
 
 
-# B13. Violamos PokemonBaseStatsPositiveShape:
+# B14. Violamos PokemonBaseStatsPositiveShape:
 # attack debe ser entero, no texto.
 poke:Bad_AttackNoEntero a poke:Pokemon ;
     poke:tieneTipoPrimario poke:Fighting ;

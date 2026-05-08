@@ -1,6 +1,34 @@
 [
 	a sh:ValidationResult ;
 	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+	sh:sourceShape _:n400 ;
+	sh:focusNode poke:Bad_EvolucionFinalNoBooleana ;
+	sh:value "si" ;
+	sh:resultPath poke:esEvolucionFinal ;
+	sh:resultMessage "esEvolucionFinal debe ser un valor booleano." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+	sh:sourceShape _:n401 ;
+	sh:focusNode poke:Bad_EvolucionaALiteral ;
+	sh:value "Wartortle" ;
+	sh:resultPath poke:evolucionaA ;
+	sh:resultMessage "evolucionaA debe apuntar a un IRI de Pokemon, no a un literal." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:NotConstraintComponent ;
+	sh:sourceShape poke:PokemonFinalEvolutionShape ;
+	sh:focusNode poke:Bad_EvolucionFinalConEvolucion ;
+	sh:resultMessage "Un Pokemon marcado como evolucion final no puede tener una evolucion posterior." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
 	sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 	sh:sourceShape _:n416 ;
 	sh:focusNode poke:Bad_MovimientoNoEsMovimiento ;
