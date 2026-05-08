@@ -11,9 +11,11 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix poke: <http://pokemon.ontology.com#> .
-@base <http://pokemon.ontology.com#> .
+@base <http://pokemon.ontology.com> .
 
 <http://pokemon.ontology.com#> rdf:type owl:Ontology ;
+			owl:versionInfo "1.0.1" ;
+			owl:versionIRI <http://pokemon.ontology.com/1.0.1> ;
 			mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################
