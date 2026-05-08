@@ -1,0 +1,126 @@
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+	sh:sourceShape _:n416 ;
+	sh:focusNode poke:Bad_MovimientoNoEsMovimiento ;
+	sh:value poke:Overgrow ;
+	sh:resultPath poke:tieneMovimiento ;
+	sh:resultMessage "Cualquier objeto en 'tieneMovimiento' debe ser un IRI de la clase pokemon:Movimiento." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:DisjointConstraintComponent ;
+	sh:sourceShape _:n417 ;
+	sh:focusNode poke:Bad_TiposIguales ;
+	sh:value poke:Fire ;
+	sh:resultPath poke:tieneTipoPrimario ;
+	sh:resultMessage "El tipo primario no puede ser igual al tipo secundario." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:InConstraintComponent ;
+	sh:sourceShape _:n418 ;
+	sh:focusNode poke:Bad_TipoPrimarioNoPermitido ;
+	sh:value poke:Sound ;
+	sh:resultPath poke:tieneTipoPrimario ;
+	sh:resultMessage "Debe tener un tipo primario válido." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+	sh:sourceShape _:n418 ;
+	sh:focusNode poke:Bad_SinTipoPrimario ;
+	sh:resultPath poke:tieneTipoPrimario ;
+	sh:resultMessage "Debe tener un tipo primario válido." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+	sh:sourceShape _:n422 ;
+	sh:focusNode poke:Bad_DosGeneraciones ;
+	sh:resultPath poke:tieneGeneracion ;
+	sh:resultMessage "Cada pokemon debe estar asociado exactamente a una generacion." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+	sh:sourceShape _:n422 ;
+	sh:focusNode poke:Bad_SinGeneracion ;
+	sh:resultPath poke:tieneGeneracion ;
+	sh:resultMessage "Cada pokemon debe estar asociado exactamente a una generacion." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+	sh:sourceShape _:n423 ;
+	sh:focusNode poke:Bad_DosFormas ;
+	sh:resultPath poke:tieneFormaRegional ;
+	sh:resultMessage "No se permite más de una forma para un mismo recurso Pokémon." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;
+	sh:sourceShape _:n424 ;
+	sh:focusNode poke:Bad_NivelFueraDeRango ;
+	sh:value -2 ;
+	sh:resultPath poke:hasExpToLvl100 ;
+	sh:resultMessage "La experiencia para llegar al nivel 100 debe ser 1 o mas" ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+	sh:sourceShape _:n424 ;
+	sh:focusNode poke:Bad_NivelNoEntero ;
+	sh:value "nose el nivel" ;
+	sh:resultPath poke:hasExpToLvl100 ;
+	sh:resultMessage "La experiencia para llegar al nivel 100 debe ser 1 o mas" ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;
+	sh:sourceShape _:n424 ;
+	sh:focusNode poke:Bad_NivelNoEntero ;
+	sh:value "nose el nivel" ;
+	sh:resultPath poke:hasExpToLvl100 ;
+	sh:resultMessage "La experiencia para llegar al nivel 100 debe ser 1 o mas" ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;
+	sh:sourceShape _:n430 ;
+	sh:focusNode poke:Bad_HPNoPositivo ;
+	sh:value 0 ;
+	sh:resultPath poke:hasSpeed ;
+	sh:resultMessage "La estadística speed debe ser al menos 1." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;
+	sh:sourceShape _:n426 ;
+	sh:focusNode poke:Bad_AttackNoEntero ;
+	sh:value "cuarenta" ;
+	sh:resultPath poke:hasAttack ;
+	sh:resultMessage "La estadística attack debe ser al menos 1." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+	sh:sourceShape _:n426 ;
+	sh:focusNode poke:Bad_AttackNoEntero ;
+	sh:value "cuarenta" ;
+	sh:resultPath poke:hasAttack ;
+	sh:resultMessage "La estadística attack debe ser al menos 1." ;
+] .
