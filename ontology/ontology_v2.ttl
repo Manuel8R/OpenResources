@@ -80,6 +80,13 @@ poke:evolucionaA rdf:type owl:ObjectProperty ;
 		rdfs:range poke:Pokemon ;
 		rdfs:label "evoluciona a" .
 
+## poke:evolucionaDe
+poke:evolucionaDe rdf:type owl:ObjectProperty ;
+		rdfs:domain poke:Pokemon ;
+		rdfs:range poke:Pokemon ;
+		rdfs:label "evoluciona de" .
+
+
 ## poke:tieneTipoExperiencia
 poke:tieneTipoExperiencia rdf:type owl:ObjectProperty ;
 		rdfs:domain poke:Pokemon ;
