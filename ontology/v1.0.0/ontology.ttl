@@ -14,8 +14,8 @@
 @base <http://pokemon.ontology.com> .
 
 <http://pokemon.ontology.com#> rdf:type owl:Ontology ;
-			owl:versionInfo "1.0.1" ;
-			owl:versionIRI <http://pokemon.ontology.com/1.0.1> ;
+			owl:versionInfo "1.0.0" ;
+			owl:versionIRI <http://pokemon.ontology.com/ontology/1.0.0> ;
 			mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################
@@ -286,4 +286,3 @@ poke:FormaRegional rdf:type owl:Class ;
 #################################
 #    General Axioms
 #################################
-

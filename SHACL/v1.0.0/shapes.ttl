@@ -1,0 +1,256 @@
+@prefix poke: <http://pokemon.ontology.com#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+#############################################################
+# Shapes para cada clase en los dataset validando evoluciones,
+# tipos, generaciones, movimientos y estadísticas base:
+# 1. Si es evolucion final no evoluciona a otro
+# 2. Si tiene moviento tiene que ser del tipo movimiento
+# 3. Que no puede ser el tipo principal y el secundario igual
+# 4. El tipo tiene que estar en la lista
+# 5. EL mismo pokemon no puede ser de dos generaciones distintas
+# 6. El pokemon no puede ser de dos formas distintas
+# 7. Todo pokemon tiene que tener nivel y estar entre (0, 100]
+# 8. Ningun valor de las estadisticas base puede ser <=0
+#############################################################
+
+#-----------------------------------------------------------
+# 1. Si es evolucion final no evoluciona mas
+#    - Si un pokemon esta marcado como evolucion final, no puede tener una evolucion posterior.
+#-----------------------------------------------------------
+poke:PokemonFinalEvolutionShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Si es evolucion final no puede evolucionar mas" ;
+
+    sh:property [
+        sh:path poke:esEvolucionFinal ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+        sh:message "esEvolucionFinal debe ser un valor booleano." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:evolucionaA ;
+        sh:nodeKind sh:IRI ;
+        sh:message "evolucionaA debe apuntar a un IRI de Pokemon, no a un literal." ;
+    ] ;
+
+    sh:not [
+        sh:property [
+            sh:path poke:esEvolucionFinal ;
+            sh:hasValue true ;
+        ] ;
+        sh:property [
+            sh:path poke:evolucionaA ;
+            sh:minCount 1 ;
+        ]
+    ] .
+#-----------------------------------------------------------
+# 2. Si tiene moviento tiene que ser del tipo movimiento
+#    - Un pokemon que tiene movimiento tiene que existir dentro de la clase: Movimiento
+#-----------------------------------------------------------
+poke:PokemonMovementClassShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Validacion de clase para movimientos" ;
+
+    sh:property [
+        sh:path poke:tieneMovimiento ;
+        sh:class poke:Movimiento ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Cualquier objeto en 'tieneMovimiento' debe ser un IRI de la clase pokemon:Movimiento." ;
+    ] .
+
+
+#-----------------------------------------------------------
+# 3. Que no puede ser el tipo principal y el secundario igual
+#    - Un pokemon no puede tener el mismo tipo asignado como primario y secundario.
+#-----------------------------------------------------------
+poke:PokemonDistinctTypeShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Unico tipo primario y secundario" ;
+
+    sh:property [
+        sh:path poke:tieneTipoPrimario ;
+        sh:disjoint poke:tieneTipoSecundario ;
+        sh:message "El tipo primario no puede ser igual al tipo secundario." ;
+    ] .
+
+#-----------------------------------------------------------
+# 4. El tipo tiene que estar en la lista
+#    - El valor de los tipos debe pertenecer estrictamente a la lista de tipos
+#-----------------------------------------------------------
+poke:PokemonAllowedTypesShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Tipos permitidos (lista cerrada de instancias rdf)" ;
+
+    sh:property [
+        sh:path poke:tieneTipoPrimario ;
+
+        sh:in (
+            poke:Grass
+            poke:Poison
+            poke:Fire
+            poke:Flying
+            poke:Water
+            poke:Bug
+            poke:Normal
+            poke:Electric
+            poke:Ground
+            poke:Fairy
+            poke:Fighting
+            poke:Psychic
+            poke:Rock
+            poke:Steel
+            poke:Ice
+            poke:Ghost
+            poke:Dragon
+            poke:Dark
+        ) ;
+
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+
+        sh:message "Debe tener un tipo primario valido." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:tieneTipoSecundario ;
+
+        sh:in (
+            poke:Grass
+            poke:Poison
+            poke:Fire
+            poke:Flying
+            poke:Water
+            poke:Bug
+            poke:Normal
+            poke:Electric
+            poke:Ground
+            poke:Fairy
+            poke:Fighting
+            poke:Psychic
+            poke:Rock
+            poke:Steel
+            poke:Ice
+            poke:Ghost
+            poke:Dragon
+            poke:Dark
+        ) ;
+
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+
+        sh:message "El tipo secundario debe ser valido." ;
+    ] .
+
+#-----------------------------------------------------------
+# 5. EL mismo pokemon no puede ser de dos generaciones distintas
+#    - Un pokemon debe pertenecer a una unica generacion.
+#-----------------------------------------------------------
+poke:PokemonSingleGenerationShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Cardinalidad de generacion" ;
+
+    sh:property [
+        sh:path poke:tieneGeneracion ;
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:message "Cada pokemon debe ser exactamente de una generacion." ;
+    ] .
+
+#-----------------------------------------------------------
+# 6. El pokemon no puede ser de dos formas distintas
+#    - Un pokemon no puede tener dos formas distinas a la vez
+#-----------------------------------------------------------
+poke:PokemonSingleFormShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Cardinalidad de forma" ;
+
+    sh:property [
+        sh:path poke:tieneFormaRegional ;
+        sh:maxCount 1 ;
+        sh:message "No se permite mas de una forma para un mismo pokemon." ;
+    ] .
+
+#-----------------------------------------------------------
+# 7. Todo pokemon tiene que tener una experiencia mayor o igual a 1 para llegar al nivel 100
+#    - El nivel 100 es alcanzado con al menos 1 de experiencia.
+#-----------------------------------------------------------
+poke:PokemonExpShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Rango de nivel permitido" ;
+
+    sh:property [
+        sh:path poke:hasExpToLvl100 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:message "La experiencia para llegar al nivel 100 debe ser 1 o mas" ;
+    ] .
+
+#-----------------------------------------------------------
+# 8. Ningun valor de las estadisticas base puede ser <=0
+#    - Ninguna estadistica base (HP, Ataque, Defensa, etc.) puede ser igual o inferior a cero.
+#-----------------------------------------------------------
+poke:PokemonBaseStatsPositiveShape
+    a sh:NodeShape ;
+    sh:targetClass poke:Pokemon ;
+    rdfs:label "Validacion de estadisticas positivas" ;
+
+   sh:property [
+        sh:path poke:hasHP ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadistica hp debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:hasAttack ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadistica attack debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:hasDefense ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadistica defense debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:hasSpAttack ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadistica spAtk debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:hasSpDefense ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadistica spDef debe ser al menos 1." ;
+    ] ;
+
+    sh:property [
+        sh:path poke:hasSpeed ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:message "La estadistica speed debe ser al menos 1." ;
+    ] .
