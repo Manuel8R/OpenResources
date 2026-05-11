@@ -16,8 +16,7 @@
 
 <http://pokemon.ontology.com#> rdf:type owl:Ontology ;
 			 dc:title "Ontologia de Pokemon"@es ;
-    		dc:creator "Manuel Bravo, " ;
-			dc:creator "Pablo Calle, " ;
+    		dc:creator "Manuel Bravo, Pablo Calle, " ;
     		dc:description "Ontologia para relacionar pokemons con sus evoluciones, atributos, habilidades, stats..."@es ;
     		dc:date "2026-05-10"^^xsd:date ;
 			owl:versionInfo "2.0.0" ;
