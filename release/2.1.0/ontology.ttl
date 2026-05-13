@@ -1,5 +1,5 @@
-@prefix : <http://pokemon.ontology.com#> .
-@prefix poke: <http://pokemon.ontology.com#> .
+@prefix : <https://w3id.org/doisr/PokemonOntologyG2#> .
+@prefix poke: <https://w3id.org/doisr/PokemonOntologyG2#> .
 @prefix other: <http://example.org/other#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,17 +11,93 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix poke: <http://pokemon.ontology.com#> .
-@base <http://pokemon.ontology.com> .
+@base <https://w3id.org/doisr/PokemonOntologyG2> .
 
-<http://pokemon.ontology.com#> rdf:type owl:Ontology ;
-			 dc:title "Ontologia de Pokemon"@es ;
-    		dc:creator "Manuel Bravo, Pablo Calle, " ;
+<https://w3id.org/doisr/PokemonOntologyG2> rdf:type owl:Ontology ;
+			dc:title "Ontologia de Pokemon"@es ;
+    		dc:creator "Manuel Bravo"@es , 
+                        "Pablo Calle"@es ,
+                        "Daniel "@es ;
     		dc:description "Ontologia para relacionar pokemons con sus evoluciones, atributos, habilidades, stats..."@es ;
-    		dc:date "2026-05-10"^^xsd:date ;
-			owl:versionInfo "2.0.0" ;
-			owl:versionIRI <http://pokemon.ontology.com/ontology/2.0.0> ;
+    		dc:date "2026-05-13"^^xsd:date ;
+			owl:versionInfo "2.1.0" ;
+			owl:versionIRI <https://w3id.org/doisr/PokemonOntologyG2/2.1.0> ;
+            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/doisr/PokemonOntologyG2" ;
+            owl:backwardCompatibleWith <https://w3id.org/doisr/PokemonOntologyG2/2.0.0> ;
+            owl:priorVersion <https://w3id.org/doisr/PokemonOntologyG2/2.0.0> ;
 			mod:createdWith <https://chowlk.linkeddata.es/> .
+
+
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/example
+<http://purl.org/vocab/vann/example> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/author
+<http://schema.org/author> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/citation
+<http://schema.org/citation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.linkedmodel.org/schema/vaem#rationale
+<http://www.linkedmodel.org/schema/vaem#rationale> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+
 
 
 
