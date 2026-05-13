@@ -18,7 +18,7 @@
                                             <http://purl.org/dc/terms/publisher> "Universidad Politécnica de Madrid"@en ;
                                             <http://purl.org/dc/terms/source> <https://www.kaggle.com/datasets/takamasakato/pokemon-all-status-data> ,
                                                                               <https://www.kaggle.com/datasets/maca11/all-pokemon-dataset> ,
-                                                                              <https://www.kaggle.com/datasets/divyadeep/pokemon> .
+                                                                              <https://www.kaggle.com/datasets/divyadeep/pokemon> ;
                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "poke" ;
                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/doisr/PokemonOntologyG2" ;
                                             owl:backwardCompatibleWith <https://w3id.org/doisr/PokemonOntologyG2/2.0.0> ;
