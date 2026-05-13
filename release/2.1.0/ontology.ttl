@@ -16,9 +16,9 @@
                                             <http://purl.org/dc/elements/1.1/title> "Ontologia de Pokemon"@es ;
                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                             <http://purl.org/dc/terms/publisher> "Universidad Politécnica de Madrid"@en ;
-                                            <http://purl.org/dc/terms/source> <https://www.kaggle.com/datasets/takamasakato/pokemon-all-status-data> ,
+                                            <http://purl.org/dc/terms/source> <https://www.kaggle.com/datasets/divyadeep/pokemon> ,
                                                                               <https://www.kaggle.com/datasets/maca11/all-pokemon-dataset> ,
-                                                                              <https://www.kaggle.com/datasets/divyadeep/pokemon> ;
+                                                                              <https://www.kaggle.com/datasets/takamasakato/pokemon-all-status-data> ;
                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "poke" ;
                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/doisr/PokemonOntologyG2" ;
                                             owl:backwardCompatibleWith <https://w3id.org/doisr/PokemonOntologyG2/2.0.0> ;
@@ -67,6 +67,14 @@
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/example
