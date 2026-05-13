@@ -8,8 +8,7 @@
 |---|---|---|
 | 1 | Manuel Bravo Roig | @Manuel8R |
 | 2 | Pablo Calle Tercero | @pcalle23 |
-| 3 | Alberto Buceta Coroba | @BuceGithub |
-| 4 | Daniel Javier Flores Flores | @danielorse |
+| 3 | Daniel Javier Flores Flores | @danielorse |
 
 ---
 
@@ -24,16 +23,39 @@ OpenResources/
 |   |-- Dataset_Pokedex.csv
 |   |-- Dataset_AllPokemon.csv
 |
-|-- ontology/
-|   |-- ontology_v2.ttl
-|   |-- ontologySchema.drawio
-|   |-- ontologySchema.xml
+|-- release/
+|   |-1.0.0/
+|   |  |-- ontology_v2.ttl
+|   |  |-- ontologySchema.drawio
+|   |  |-- ontologySchema.xml
+|   |
+|   |-2.0.0/
+|   |  |-- ontology.ttl
+|   |  |-- 406.html
+|   |  |-- index-en.html
+|   |
+|   |-2.1.0/
+|     |-- ontology.ttl
+|     |-- 406.html
+|     |-- index-en.html
 |
 |-- SHACL/
-|   |-- shapes.ttl
-|   |-- datos.ttl
-|   |-- reportShacl.ttl
-|   |-- report.md
+|   |-1.0.0/
+|   |  |-- report.md
+|   |  |-- reportShacl.ttl
+|   |  |-- datos.ttl
+|   |  |-- shapes.ttl
+|   |
+|   |-2.0.0/
+|   |  |-- reportShacl.ttl
+|   |  |-- datos.ttl
+|   |  |-- shapes.ttl
+|   |
+|   |-2.1.0/
+|   |  |-- reportShacl.ttl
+|   |  |-- datos.ttl
+|   |  |-- shapes.ttl
+|   |  ...
 |
 |-- OntologyRequirements.csv
 |-- Casos de uso.pdf
@@ -78,4 +100,4 @@ Hemos utilizado la IA para:
 
 ## Última actualización del README
 
-08 mayo de 2026
+13 mayo de 2026

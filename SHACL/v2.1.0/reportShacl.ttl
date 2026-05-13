@@ -1,0 +1,133 @@
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+	sh:sourceShape _:n272 ;
+	sh:focusNode poke:Bad_EvolucionFinalNoBooleana ;
+	sh:value "si" ;
+	sh:resultPath poke:esEvolucionFinal ;
+	sh:resultMessage "esEvolucionFinal debe ser un valor booleano." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+	sh:sourceShape _:n273 ;
+	sh:focusNode poke:Bad_EvolucionaALiteral ;
+	sh:value "Wartortle" ;
+	sh:resultPath poke:evolucionaA ;
+	sh:resultMessage "evolucionaA debe apuntar a un IRI de Pokemon, no a un literal." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:NotConstraintComponent ;
+	sh:sourceShape poke:PokemonFinalEvolutionShape ;
+	sh:focusNode poke:Bad_EvolucionFinalConEvolucion ;
+	sh:value poke:Bad_EvolucionFinalConEvolucion ;
+	sh:resultMessage "Value does have shape Blank node _:n274" ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+	sh:sourceShape _:n277 ;
+	sh:focusNode poke:Bad_MovimientoNoEsMovimiento ;
+	sh:value poke:Overgrow ;
+	sh:resultPath poke:tieneMovimiento ;
+	sh:resultMessage "Cualquier objeto en 'tieneMovimiento' debe ser un IRI de la clase pokemon:Movimiento." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:InConstraintComponent ;
+	sh:sourceShape _:n278 ;
+	sh:focusNode poke:Bad_TipoNoPermitido ;
+	sh:value poke:Sound ;
+	sh:resultPath poke:tieneTipo ;
+	sh:resultMessage "Un Pokemon debe tener entre 1 y 2 tipos validos." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+	sh:sourceShape _:n278 ;
+	sh:focusNode poke:Bad_SinTipo ;
+	sh:resultPath poke:tieneTipo ;
+	sh:resultMessage "Un Pokemon debe tener entre 1 y 2 tipos validos." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+	sh:sourceShape _:n278 ;
+	sh:focusNode poke:Bad_MasDeDosTipos ;
+	sh:resultPath poke:tieneTipo ;
+	sh:resultMessage "Un Pokemon debe tener entre 1 y 2 tipos validos." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+	sh:sourceShape _:n280 ;
+	sh:focusNode poke:Bad_DosGeneraciones ;
+	sh:resultPath poke:tieneGeneracion ;
+	sh:resultMessage "Cada pokemon debe ser exactamente de una generacion." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+	sh:sourceShape _:n280 ;
+	sh:focusNode poke:Bad_SinGeneracion ;
+	sh:resultPath poke:tieneGeneracion ;
+	sh:resultMessage "Cada pokemon debe ser exactamente de una generacion." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+	sh:sourceShape _:n281 ;
+	sh:focusNode poke:Bad_DosFormas ;
+	sh:resultPath poke:tieneFormaRegional ;
+	sh:resultMessage "No se permite mas de una forma para un mismo pokemon." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;
+	sh:sourceShape _:n282 ;
+	sh:focusNode poke:Bad_ExpNegativa ;
+	sh:value -2 ;
+	sh:resultPath poke:hasExpToLvl100 ;
+	sh:resultMessage "La experiencia para llegar al nivel 100 debe ser 1 o mas" ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;
+	sh:sourceShape _:n284 ;
+	sh:focusNode poke:Bad_AttackNoEntero ;
+	sh:value "cuarenta" ;
+	sh:resultPath poke:hasAttack ;
+	sh:resultMessage "La estadistica attack debe ser al menos 1." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+	sh:sourceShape _:n284 ;
+	sh:focusNode poke:Bad_AttackNoEntero ;
+	sh:value "cuarenta" ;
+	sh:resultPath poke:hasAttack ;
+	sh:resultMessage "La estadistica attack debe ser al menos 1." ;
+] .
+[
+	a sh:ValidationResult ;
+	sh:resultSeverity sh:Violation ;
+	sh:sourceConstraintComponent sh:HasValueConstraintComponent ;
+	sh:sourceShape _:n289 ;
+	sh:focusNode poke:Bad_ClaseFuegoSinFire ;
+	sh:resultPath poke:tieneTipo ;
+	sh:resultMessage "Todo PokemonFuego debe tener el tipo Fuego." ;
+] .

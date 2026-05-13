@@ -1,0 +1,582 @@
+@prefix poke: <https://w3id.org/doisr/PokemonOntologyG2#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+#############################################################
+# Datos adaptados a ontology_nueva.ttl + shapes_nuevo.ttl
+#
+# Cambios principales:
+# - Se elimina tieneTipoPrimario / tieneTipoSecundario
+# - Se usa poke:tieneTipo
+# - Se añaden subclases PokemonTipoX
+# - Los pokemon duales pertenecen a varias subclases
+#############################################################
+
+
+########################
+# Recursos reutilizables
+########################
+
+# Generaciones
+poke:Gen1 a poke:Generacion ;
+    rdfs:label "Generacion 1" .
+
+poke:Gen2 a poke:Generacion ;
+    rdfs:label "Generacion 2" .
+
+
+########################
+# Movimientos validos
+########################
+
+poke:VineWhip a poke:Movimiento ;
+    rdfs:label "Vine Whip" .
+
+poke:Ember a poke:Movimiento ;
+    rdfs:label "Ember" .
+
+poke:WaterGun a poke:Movimiento ;
+    rdfs:label "Water Gun" .
+
+poke:Thunderbolt a poke:Movimiento ;
+    rdfs:label "Thunderbolt" .
+
+poke:RazorLeaf a poke:Movimiento ;
+    rdfs:label "Razor Leaf" .
+
+
+########################
+# Recurso incorrecto
+########################
+
+poke:Overgrow a poke:Habilidad ;
+    rdfs:label "Overgrow" .
+
+
+#############################################################
+# A) Pokemon VALIDOS
+#############################################################
+
+#################################################
+# Bulbasaur -> dual type
+#################################################
+
+poke:Bulbasaur
+    a poke:Pokemon ,
+      poke:PokemonPlanta ,
+      poke:PokemonVeneno ;
+
+    poke:tieneTipo poke:Grass ,
+                    poke:Poison ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 45 ;
+    poke:hasAttack 49 ;
+    poke:hasDefense 49 ;
+    poke:hasSpAttack 65 ;
+    poke:hasSpDefense 65 ;
+    poke:hasSpeed 45 ;
+
+    poke:hasExpToLvl100 1059860 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:evolucionaA poke:Ivysaur ;
+
+    poke:tieneMovimiento poke:VineWhip .
+
+
+#################################################
+# Ivysaur
+#################################################
+
+poke:Ivysaur
+    a poke:Pokemon ,
+      poke:PokemonPlanta ,
+      poke:PokemonVeneno ;
+
+    poke:tieneTipo poke:Grass ,
+                    poke:Poison ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 60 ;
+    poke:hasAttack 62 ;
+    poke:hasDefense 63 ;
+    poke:hasSpAttack 80 ;
+    poke:hasSpDefense 80 ;
+    poke:hasSpeed 60 ;
+
+    poke:hasExpToLvl100 1059860 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:evolucionaA poke:Venusaur ;
+
+    poke:tieneMovimiento poke:RazorLeaf .
+
+
+#################################################
+# Venusaur
+#################################################
+
+poke:Venusaur
+    a poke:Pokemon ,
+      poke:PokemonPlanta ,
+      poke:PokemonVeneno ;
+
+    poke:tieneTipo poke:Grass ,
+                    poke:Poison ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 80 ;
+    poke:hasAttack 82 ;
+    poke:hasDefense 83 ;
+    poke:hasSpAttack 100 ;
+    poke:hasSpDefense 100 ;
+    poke:hasSpeed 80 ;
+
+    poke:hasExpToLvl100 1059860 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:tieneMovimiento poke:RazorLeaf .
+
+
+#################################################
+# Charmander
+#################################################
+
+poke:Charmander
+    a poke:Pokemon ,
+      poke:PokemonFuego ;
+
+    poke:tieneTipo poke:Fire ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 39 ;
+    poke:hasAttack 52 ;
+    poke:hasDefense 43 ;
+    poke:hasSpAttack 60 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 65 ;
+
+    poke:hasExpToLvl100 1059860 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:evolucionaA poke:Charmeleon ;
+
+    poke:tieneMovimiento poke:Ember .
+
+
+#################################################
+# Squirtle
+#################################################
+
+poke:Squirtle
+    a poke:Pokemon ,
+      poke:PokemonAgua ;
+
+    poke:tieneTipo poke:Water ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 44 ;
+    poke:hasAttack 48 ;
+    poke:hasDefense 65 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 64 ;
+    poke:hasSpeed 43 ;
+
+    poke:hasExpToLvl100 1059860 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:evolucionaA poke:Wartortle ;
+
+    poke:tieneMovimiento poke:WaterGun .
+
+
+#################################################
+# Pikachu
+#################################################
+
+poke:Pikachu
+    a poke:Pokemon ,
+      poke:PokemonElectrico ;
+
+    poke:tieneTipo poke:Electric ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:evolucionaA poke:Raichu ;
+
+    poke:tieneMovimiento poke:Thunderbolt .
+
+
+
+#############################################################
+# B) Pokemon INVALIDOS
+#############################################################
+
+#################################################
+# B1 - esEvolucionFinal no booleano
+#################################################
+
+poke:Bad_EvolucionFinalNoBooleana
+    a poke:Pokemon ,
+      poke:PokemonFuego ;
+
+    poke:tieneTipo poke:Fire ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 60 ;
+    poke:hasAttack 62 ;
+    poke:hasDefense 63 ;
+    poke:hasSpAttack 80 ;
+    poke:hasSpDefense 80 ;
+    poke:hasSpeed 60 ;
+
+    poke:hasExpToLvl100 1059860 ;
+
+    poke:esEvolucionFinal "si" ;
+
+    poke:tieneMovimiento poke:Thunderbolt .
+
+
+#################################################
+# B2 - evolucionaA literal
+#################################################
+
+poke:Bad_EvolucionaALiteral
+    a poke:Pokemon ,
+      poke:PokemonAgua ;
+
+    poke:tieneTipo poke:Water ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:evolucionaA "Wartortle" ;
+
+    poke:tieneMovimiento poke:WaterGun .
+
+
+#################################################
+# B3 - evolucion final con evolucion
+#################################################
+
+poke:Bad_EvolucionFinalConEvolucion
+    a poke:Pokemon ,
+      poke:PokemonFuego ;
+
+    poke:tieneTipo poke:Fire ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 60 ;
+    poke:hasAttack 62 ;
+    poke:hasDefense 63 ;
+    poke:hasSpAttack 80 ;
+    poke:hasSpDefense 80 ;
+    poke:hasSpeed 60 ;
+
+    poke:hasExpToLvl100 1059860 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:evolucionaA poke:Charizard ;
+
+    poke:tieneMovimiento poke:Ember .
+
+
+#################################################
+# B4 - movimiento incorrecto
+#################################################
+
+poke:Bad_MovimientoNoEsMovimiento
+    a poke:Pokemon ,
+      poke:PokemonPlanta ;
+
+    poke:tieneTipo poke:Grass ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:evolucionaA poke:Raichu ;
+
+    poke:tieneMovimiento poke:Overgrow .
+
+
+#################################################
+# B5 - tipo no permitido
+#################################################
+
+poke:Bad_TipoNoPermitido
+    a poke:Pokemon ;
+
+    poke:tieneTipo poke:Sound ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:tieneMovimiento poke:Ember .
+
+
+#################################################
+# B6 - sin tipo
+#################################################
+
+poke:Bad_SinTipo
+    a poke:Pokemon ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:tieneMovimiento poke:Ember .
+
+
+#################################################
+# B7 - mas de 2 tipos
+#################################################
+
+poke:Bad_MasDeDosTipos
+    a poke:Pokemon ;
+
+    poke:tieneTipo poke:Fire ,
+                    poke:Water ,
+                    poke:Electric ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 50 ;
+    poke:hasAttack 50 ;
+    poke:hasDefense 50 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 50 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:tieneMovimiento poke:Thunderbolt .
+
+
+#################################################
+# B8 - dos generaciones
+#################################################
+
+poke:Bad_DosGeneraciones
+    a poke:Pokemon ,
+      poke:PokemonPsiquico ;
+
+    poke:tieneTipo poke:Psychic ;
+
+    poke:tieneGeneracion poke:Gen1 ,
+                           poke:Gen2 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:tieneMovimiento poke:Thunderbolt .
+
+
+#################################################
+# B9 - sin generacion
+#################################################
+
+poke:Bad_SinGeneracion
+    a poke:Pokemon ,
+      poke:PokemonPsiquico ;
+
+    poke:tieneTipo poke:Psychic ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:tieneMovimiento poke:Thunderbolt .
+
+
+#################################################
+# B10 - dos formas
+#################################################
+
+poke:FormaNormal a poke:FormaRegional .
+poke:FormaAlola a poke:FormaRegional .
+
+poke:Bad_DosFormas
+    a poke:Pokemon ,
+      poke:PokemonDragon ;
+
+    poke:tieneTipo poke:Dragon ;
+
+    poke:tieneFormaRegional poke:FormaNormal ,
+                             poke:FormaAlola ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:tieneMovimiento poke:RazorLeaf .
+
+
+#################################################
+# B11 - exp negativa
+#################################################
+
+poke:Bad_ExpNegativa
+    a poke:Pokemon ,
+      poke:PokemonHielo ;
+
+    poke:tieneTipo poke:Ice ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack 55 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 90 ;
+
+    poke:hasExpToLvl100 -2 ;
+
+    poke:esEvolucionFinal true ;
+
+    poke:tieneMovimiento poke:RazorLeaf .
+
+
+#################################################
+# B12 - attack no entero
+#################################################
+
+poke:Bad_AttackNoEntero
+    a poke:Pokemon ,
+      poke:PokemonLucha ;
+
+    poke:tieneTipo poke:Fighting ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 35 ;
+    poke:hasAttack "cuarenta" ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 50 ;
+    poke:hasSpDefense 50 ;
+    poke:hasSpeed 70 ;
+
+    poke:hasExpToLvl100 4334 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:tieneMovimiento poke:RazorLeaf .
+
+
+#################################################
+# B13 - inconsistencia clase/tipo
+# PokemonFuego sin tipo Fire
+#################################################
+
+poke:Bad_ClaseFuegoSinFire
+    a poke:Pokemon ,
+      poke:PokemonFuego ;
+
+    poke:tieneTipo poke:Water ;
+
+    poke:tieneGeneracion poke:Gen1 ;
+
+    poke:hasHP 40 ;
+    poke:hasAttack 40 ;
+    poke:hasDefense 40 ;
+    poke:hasSpAttack 40 ;
+    poke:hasSpDefense 40 ;
+    poke:hasSpeed 40 ;
+
+    poke:hasExpToLvl100 1000000 ;
+
+    poke:esEvolucionFinal false ;
+
+    poke:tieneMovimiento poke:WaterGun .
