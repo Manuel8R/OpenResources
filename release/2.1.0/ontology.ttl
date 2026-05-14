@@ -121,6 +121,22 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+
+###  https://w3id.org/doisr/PokemonOntologyG2#fuerteContra
+:fuerteContra rdf:type owl:ObjectProperty ;
+              owl:inverseOf :debilContra ;
+              rdfs:domain :Tipo ;
+              rdfs:range :Tipo ;
+              rdfs:label "Indica que este tipo es fuerte (tiene multiplicador x2) contra otro" .
+            
+
+###  https://w3id.org/doisr/PokemonOntologyG2#debilContra
+:debilContra rdf:type owl:ObjectProperty ;
+             rdfs:domain :Tipo ;
+             rdfs:range :Tipo ;
+             rdfs:label "Indica que este tipo es debil (tiene multiplicador x2) contra otro" .
+
+
 ###  https://w3id.org/doisr/PokemonOntologyG2#evolucionaA
 :evolucionaA rdf:type owl:ObjectProperty ;
              owl:inverseOf :evolucionaDe ;

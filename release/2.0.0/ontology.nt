@@ -1,0 +1,651 @@
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/doisr/PokemonOntologyG2/release/2.0.0> .
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://purl.org/dc/elements/1.1/creator> "Manuel Bravo, Pablo Calle, " .
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://purl.org/dc/elements/1.1/date> "2026-05-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://purl.org/dc/elements/1.1/description> "Ontologia para relacionar pokemons con sus evoluciones, atributos, habilidades, stats..."@es .
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://purl.org/dc/elements/1.1/title> "Ontologia de Pokemon"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://www.w3.org/2002/07/owl#incompatibleWith> <https://w3id.org/doisr/PokemonOntologyG2/1.0.0> .
+<https://w3id.org/doisr/PokemonOntologyG2#> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.0" .
+<https://w3id.org/doisr/PokemonOntologyG2#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#evolucionaA
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaA> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe> .
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaA> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaA> <http://www.w3.org/2000/01/rdf-schema#label> "evoluciona a" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe> <http://www.w3.org/2000/01/rdf-schema#label> "evoluciona de" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria
+<https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Categoria> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria> <http://www.w3.org/2000/01/rdf-schema#label> "tiene categoria" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneColor
+<https://w3id.org/doisr/PokemonOntologyG2#tieneColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneColor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneColor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Color> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneColor> <http://www.w3.org/2000/01/rdf-schema#label> "tiene color" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva> <http://www.w3.org/2000/01/rdf-schema#label> "tiene fase evolutiva" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#FormaRegional> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional> <http://www.w3.org/2000/01/rdf-schema#label> "tiene forma regional" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Generacion> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion> <http://www.w3.org/2000/01/rdf-schema#label> "tiene generacion" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo> <http://www.w3.org/2000/01/rdf-schema#label> "tiene grupo huevo" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Habilidad> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad> <http://www.w3.org/2000/01/rdf-schema#label> "tiene habilidad" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Habilidad> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta> <http://www.w3.org/2000/01/rdf-schema#label> "tiene habilidad secreta" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento
+<https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Movimiento> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento> <http://www.w3.org/2000/01/rdf-schema#label> "tiene Movimiento" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneTipo
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tipo" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia> .
+<https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tipo experiencia" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento
+<https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Movimiento> .
+<https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento> <http://www.w3.org/2000/01/rdf-schema#label> "el tipo de un movimiento" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#esEvolucionFinal
+<https://w3id.org/doisr/PokemonOntologyG2#esEvolucionFinal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#esEvolucionFinal> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#esEvolucionFinal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/PokemonOntologyG2#esEvolucionFinal> <http://www.w3.org/2000/01/rdf-schema#label> "is final evolution" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasAttack
+<https://w3id.org/doisr/PokemonOntologyG2#hasAttack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasAttack> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasAttack> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasAttack> <http://www.w3.org/2000/01/rdf-schema#label> "has attack" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasBMI
+<https://w3id.org/doisr/PokemonOntologyG2#hasBMI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBMI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBMI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBMI> <http://www.w3.org/2000/01/rdf-schema#label> "has b m i" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasBST
+<https://w3id.org/doisr/PokemonOntologyG2#hasBST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBST> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBST> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBST> <http://www.w3.org/2000/01/rdf-schema#label> "has b s t" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience
+<https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience> <http://www.w3.org/2000/01/rdf-schema#label> "has base experience" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate
+<https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate> <http://www.w3.org/2000/01/rdf-schema#label> "has catch rate" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasDefense
+<https://w3id.org/doisr/PokemonOntologyG2#hasDefense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasDefense> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasDefense> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasDefense> <http://www.w3.org/2000/01/rdf-schema#label> "has defense" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps
+<https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps> <http://www.w3.org/2000/01/rdf-schema#label> "has egg steps" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100
+<https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100> <http://www.w3.org/2000/01/rdf-schema#label> "has exp to lvl100" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio> <http://www.w3.org/2000/01/rdf-schema#label> "has gender female ratio" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio> <http://www.w3.org/2000/01/rdf-schema#label> "has gender male ratio" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasHP
+<https://w3id.org/doisr/PokemonOntologyG2#hasHP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasHP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasHP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasHP> <http://www.w3.org/2000/01/rdf-schema#label> "has h p" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasHeight
+<https://w3id.org/doisr/PokemonOntologyG2#hasHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has height" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack> <http://www.w3.org/2000/01/rdf-schema#label> "has sp attack" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense> <http://www.w3.org/2000/01/rdf-schema#label> "has sp defense" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasSpeed
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpeed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "hasSpeed" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#hasWeight
+<https://w3id.org/doisr/PokemonOntologyG2#hasWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasWeight> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasWeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/doisr/PokemonOntologyG2#hasWeight> <http://www.w3.org/2000/01/rdf-schema#label> "has weight" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#isLegendary
+<https://w3id.org/doisr/PokemonOntologyG2#isLegendary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#isLegendary> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#isLegendary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/PokemonOntologyG2#isLegendary> <http://www.w3.org/2000/01/rdf-schema#label> "is legendary" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#potenciaMovimiento
+<https://w3id.org/doisr/PokemonOntologyG2#potenciaMovimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#potenciaMovimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Movimiento> .
+<https://w3id.org/doisr/PokemonOntologyG2#potenciaMovimiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#precisionMovimiento
+<https://w3id.org/doisr/PokemonOntologyG2#precisionMovimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/PokemonOntologyG2#precisionMovimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/PokemonOntologyG2#Movimiento> .
+<https://w3id.org/doisr/PokemonOntologyG2#precisionMovimiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Categoria
+<https://w3id.org/doisr/PokemonOntologyG2#Categoria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Categoria> <http://www.w3.org/2000/01/rdf-schema#label> "Categoria" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Color
+<https://w3id.org/doisr/PokemonOntologyG2#Color> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Color> <http://www.w3.org/2000/01/rdf-schema#label> "Color" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva
+<https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva> <http://www.w3.org/2000/01/rdf-schema#label> "Fase Evolutiva" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#FormaRegional
+<https://w3id.org/doisr/PokemonOntologyG2#FormaRegional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#FormaRegional> <http://www.w3.org/2000/01/rdf-schema#label> "Forma Regional" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Generacion
+<https://w3id.org/doisr/PokemonOntologyG2#Generacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Generacion> <http://www.w3.org/2000/01/rdf-schema#label> "Generacion" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo
+<https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo> <http://www.w3.org/2000/01/rdf-schema#label> "Grupohuevo" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Habilidad
+<https://w3id.org/doisr/PokemonOntologyG2#Habilidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Habilidad> <http://www.w3.org/2000/01/rdf-schema#label> "Habilidad" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Movimiento
+<https://w3id.org/doisr/PokemonOntologyG2#Movimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Movimiento> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Movimiento> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Movimiento> <http://www.w3.org/2000/01/rdf-schema#label> "Movimiento" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Pokemon
+<https://w3id.org/doisr/PokemonOntologyG2#Pokemon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Pokemon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/doisr/PokemonOntologyG2#Pokemon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid2 <http://www.w3.org/2002/07/owl#maxCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/doisr/PokemonOntologyG2#Pokemon> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Pokemon> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonAcero
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAcero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAcero> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Steel> .
+<https://w3id.org/doisr/PokemonOntologyG2#Steel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAcero> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAcero> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Acero" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonAgua
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAgua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAgua> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid4 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Water> .
+<https://w3id.org/doisr/PokemonOntologyG2#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAgua> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonAgua> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Agua" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonBicho
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonBicho> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonBicho> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid5 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Bug> .
+<https://w3id.org/doisr/PokemonOntologyG2#Bug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonBicho> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonBicho> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Bicho" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonDragon
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonDragon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonDragon> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid6 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Dragon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dragon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonDragon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonDragon> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Dragon" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonElectrico
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonElectrico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonElectrico> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Electric> .
+<https://w3id.org/doisr/PokemonOntologyG2#Electric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonElectrico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonElectrico> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Electrico" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonFantasma
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFantasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFantasma> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid8 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Ghost> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ghost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFantasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFantasma> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Fantasma" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonFuego
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFuego> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFuego> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid9 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Fire> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFuego> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonFuego> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Fuego" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonHada
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHada> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid10 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Fairy> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fairy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHada> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHada> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Hada" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonHielo
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHielo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHielo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Ice> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHielo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonHielo> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Hielo" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonLucha
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonLucha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonLucha> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid12 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Fighting> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonLucha> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonLucha> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Lucha" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonNormal
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonNormal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonNormal> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid13 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Normal> .
+<https://w3id.org/doisr/PokemonOntologyG2#Normal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonNormal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonNormal> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Normal" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonPlanta
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPlanta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPlanta> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid14 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Grass> .
+<https://w3id.org/doisr/PokemonOntologyG2#Grass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPlanta> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPlanta> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Planta" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonPsiquico
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPsiquico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPsiquico> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid15 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Psychic> .
+<https://w3id.org/doisr/PokemonOntologyG2#Psychic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPsiquico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonPsiquico> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Psiquico" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonRoca
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonRoca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonRoca> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid16 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Rock> .
+<https://w3id.org/doisr/PokemonOntologyG2#Rock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonRoca> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonRoca> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Roca" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonSiniestro
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonSiniestro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonSiniestro> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid17 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Dark> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonSiniestro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonSiniestro> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Siniestro" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonTierra
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonTierra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonTierra> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid18 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Ground> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ground> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonTierra> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonTierra> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Tierra" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonVeneno
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVeneno> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVeneno> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Poison> .
+<https://w3id.org/doisr/PokemonOntologyG2#Poison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVeneno> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVeneno> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Veneno" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#PokemonVolador
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVolador> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVolador> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/PokemonOntologyG2#tieneTipo> .
+_:genid20 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/doisr/PokemonOntologyG2#Flying> .
+<https://w3id.org/doisr/PokemonOntologyG2#Flying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVolador> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/doisr/PokemonOntologyG2#Pokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#PokemonVolador> <http://www.w3.org/2000/01/rdf-schema#label> "Pokemon Volador" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Tipo
+<https://w3id.org/doisr/PokemonOntologyG2#Tipo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#Tipo> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo" .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia
+<https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo Experiencia" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Bug
+<https://w3id.org/doisr/PokemonOntologyG2#Bug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Bug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Bug> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Bug> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bicho"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#Bug> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bug"@en .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Dark
+<https://w3id.org/doisr/PokemonOntologyG2#Dark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dark> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dark> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dark"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Dark> <http://www.w3.org/2004/02/skos/core#prefLabel> "Siniestro"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Dragon
+<https://w3id.org/doisr/PokemonOntologyG2#Dragon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dragon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dragon> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Dragon> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dragon"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Dragon> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dragon"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Electric
+<https://w3id.org/doisr/PokemonOntologyG2#Electric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Electric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Electric> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Electric> <http://www.w3.org/2004/02/skos/core#prefLabel> "Electric"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Electric> <http://www.w3.org/2004/02/skos/core#prefLabel> "Electrico"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Fairy
+<https://w3id.org/doisr/PokemonOntologyG2#Fairy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fairy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fairy> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fairy> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fairy"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Fairy> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hada"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Fighting
+<https://w3id.org/doisr/PokemonOntologyG2#Fighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fighting> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fighting> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fighting"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Fighting> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lucha"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Fire
+<https://w3id.org/doisr/PokemonOntologyG2#Fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fire> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Fire> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fire"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Fire> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuego"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Flying
+<https://w3id.org/doisr/PokemonOntologyG2#Flying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Flying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Flying> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Flying> <http://www.w3.org/2004/02/skos/core#prefLabel> "Flying"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Flying> <http://www.w3.org/2004/02/skos/core#prefLabel> "Volador"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Ghost
+<https://w3id.org/doisr/PokemonOntologyG2#Ghost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ghost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ghost> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ghost> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fantasma"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#Ghost> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ghost"@en .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Grass
+<https://w3id.org/doisr/PokemonOntologyG2#Grass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Grass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Grass> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Grass> <http://www.w3.org/2004/02/skos/core#prefLabel> "Grass"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Grass> <http://www.w3.org/2004/02/skos/core#prefLabel> "Planta"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Ground
+<https://w3id.org/doisr/PokemonOntologyG2#Ground> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ground> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ground> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ground> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ground"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Ground> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tierra"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Ice
+<https://w3id.org/doisr/PokemonOntologyG2#Ice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ice> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Ice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hielo"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#Ice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ice"@en .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Normal
+<https://w3id.org/doisr/PokemonOntologyG2#Normal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Normal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Normal> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Normal> <http://www.w3.org/2004/02/skos/core#prefLabel> "Normal"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Normal> <http://www.w3.org/2004/02/skos/core#prefLabel> "Normal"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Poison
+<https://w3id.org/doisr/PokemonOntologyG2#Poison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Poison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Poison> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Poison> <http://www.w3.org/2004/02/skos/core#prefLabel> "Poison"@en .
+<https://w3id.org/doisr/PokemonOntologyG2#Poison> <http://www.w3.org/2004/02/skos/core#prefLabel> "Veneno"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Psychic
+<https://w3id.org/doisr/PokemonOntologyG2#Psychic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Psychic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Psychic> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Psychic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psiquico"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#Psychic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychic"@en .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Rock
+<https://w3id.org/doisr/PokemonOntologyG2#Rock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Rock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Rock> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Rock> <http://www.w3.org/2004/02/skos/core#prefLabel> "Roca"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#Rock> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rock"@en .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Steel
+<https://w3id.org/doisr/PokemonOntologyG2#Steel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Steel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Steel> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Steel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Acero"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#Steel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Steel"@en .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon
+<https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tipos Pokemon"@es .
+# 
+# https://w3id.org/doisr/PokemonOntologyG2#Water
+<https://w3id.org/doisr/PokemonOntologyG2#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/PokemonOntologyG2#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/doisr/PokemonOntologyG2#Tipo> .
+<https://w3id.org/doisr/PokemonOntologyG2#Water> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/PokemonOntologyG2#TiposPokemon> .
+<https://w3id.org/doisr/PokemonOntologyG2#Water> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agua"@es .
+<https://w3id.org/doisr/PokemonOntologyG2#Water> <http://www.w3.org/2004/02/skos/core#prefLabel> "Water"@en .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
