@@ -202,6 +202,9 @@
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -274,6 +277,10 @@
     "@language" : "es",
     "@value" : "Ontologia de Pokemon"
   } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "es",
+    "@value" : "Esta ontologia tiene como objetivo clasificar los distintos pokemons y hacer mas manejable sus datos y estadisticas"
+  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
@@ -293,6 +300,14 @@
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@value" : "https://w3id.org/doisr/PokemonOntologyG2"
+  } ],
+  "http://schema.org/citation" : [ {
+    "@language" : "es",
+    "@value" : "Citar este vocabulario como: Bravo, M., Calle, P. y Flores, D. Ontologia de Pokemon 2.1.0."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Este vocabulario esta principalmente enfocado en el competritivo de pokemon, haciendo mas facil la relacion de datos y su recogida."
   } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2/2.0.0"

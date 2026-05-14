@@ -20,6 +20,7 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-13</dc:date>
         <dc:description xml:lang="es">Ontologia para relacionar pokemons con sus evoluciones, atributos, habilidades, stats...</dc:description>
         <dc:title xml:lang="es">Ontologia de Pokemon</dc:title>
+        <terms:abstract xml:lang="es">Esta ontologia tiene como objetivo clasificar los distintos pokemons y hacer mas manejable sus datos y estadisticas</terms:abstract>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:publisher xml:lang="en">Universidad Politécnica de Madrid</terms:publisher>
         <terms:source rdf:resource="https://www.kaggle.com/datasets/divyadeep/pokemon"/>
@@ -27,6 +28,8 @@
         <terms:source rdf:resource="https://www.kaggle.com/datasets/takamasakato/pokemon-all-status-data"/>
         <vann:preferredNamespacePrefix>poke</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/doisr/PokemonOntologyG2</vann:preferredNamespaceUri>
+        <schema:citation xml:lang="es">Citar este vocabulario como: Bravo, M., Calle, P. y Flores, D. Ontologia de Pokemon 2.1.0.</schema:citation>
+        <rdfs:comment xml:lang="es">Este vocabulario esta principalmente enfocado en el competritivo de pokemon, haciendo mas facil la relacion de datos y su recogida.</rdfs:comment>
         <owl:backwardCompatibleWith rdf:resource="https://w3id.org/doisr/PokemonOntologyG2/2.0.0"/>
         <owl:priorVersion rdf:resource="https://w3id.org/doisr/PokemonOntologyG2/2.0.0"/>
         <owl:versionInfo>2.1.0</owl:versionInfo>
@@ -92,6 +95,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
     
 
 

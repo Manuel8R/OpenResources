@@ -6,6 +6,7 @@
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/elements/1.1/date> "2026-05-13"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/elements/1.1/description> "Ontologia para relacionar pokemons con sus evoluciones, atributos, habilidades, stats..."@es .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/elements/1.1/title> "Ontologia de Pokemon"@es .
+<https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/terms/abstract> "Esta ontologia tiene como objetivo clasificar los distintos pokemons y hacer mas manejable sus datos y estadisticas"@es .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/terms/publisher> "Universidad Politécnica de Madrid"@en .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/terms/source> <https://www.kaggle.com/datasets/divyadeep/pokemon> .
@@ -13,6 +14,8 @@
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/dc/terms/source> <https://www.kaggle.com/datasets/takamasakato/pokemon-all-status-data> .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poke" .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/doisr/PokemonOntologyG2" .
+<https://w3id.org/doisr/PokemonOntologyG2> <http://schema.org/citation> "Citar este vocabulario como: Bravo, M., Calle, P. y Flores, D. Ontologia de Pokemon 2.1.0."@es .
+<https://w3id.org/doisr/PokemonOntologyG2> <http://www.w3.org/2000/01/rdf-schema#comment> "Este vocabulario esta principalmente enfocado en el competritivo de pokemon, haciendo mas facil la relacion de datos y su recogida."@es .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/doisr/PokemonOntologyG2/2.0.0> .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/doisr/PokemonOntologyG2/2.0.0> .
 <https://w3id.org/doisr/PokemonOntologyG2> <http://www.w3.org/2002/07/owl#versionInfo> "2.1.0" .
@@ -45,6 +48,9 @@
 # 
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
