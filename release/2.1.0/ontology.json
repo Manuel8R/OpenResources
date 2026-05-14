@@ -322,12 +322,20 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Categoria",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Las categorias que existen de pokemons (ordinary, mythical, semi-legendary o legendary)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Categoria"
   } ]
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Color",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Los posibles colores que puede tener un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Color"
   } ]
@@ -386,6 +394,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Que fases evolutivas hay."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Fase Evolutiva"
   } ]
@@ -431,12 +443,20 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#FormaRegional",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Que formas regionales puede tomar un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Forma Regional"
   } ]
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Generacion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Las generaciones de pokemons que hay (1, 2, 3...)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Generacion"
   } ]
@@ -482,12 +502,20 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Los grupos de huevo que puede haber."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Grupohuevo"
   } ]
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Habilidad",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Las habilidades pasivas que puede tener un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Habilidad"
   } ]
@@ -507,6 +535,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Movimiento",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Los movimientos que puede realizar un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Movimiento"
   } ],
@@ -544,6 +576,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Clase que representa un Pokémon dentro de la ontología."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon"
   } ],
@@ -558,6 +594,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonAcero",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo acero."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Acero"
   } ],
@@ -570,6 +610,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonAgua",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo agua."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Agua"
   } ],
@@ -582,6 +626,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonBicho",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo bicho."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Bicho"
   } ],
@@ -594,6 +642,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonDragon",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo dragon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Dragon"
   } ],
@@ -606,6 +658,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonElectrico",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo electrico."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Electrico"
   } ],
@@ -618,6 +674,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonFantasma",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo fantasma."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Fantasma"
   } ],
@@ -630,6 +690,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonFuego",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo fuego."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Fuego"
   } ],
@@ -642,6 +706,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonHada",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo hada."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Hada"
   } ],
@@ -654,6 +722,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonHielo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo hielo."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Hielo"
   } ],
@@ -666,6 +738,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonLucha",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo lucha."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Lucha"
   } ],
@@ -678,6 +754,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonNormal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo normal."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Normal"
   } ],
@@ -690,6 +770,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonPlanta",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo planta."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Planta"
   } ],
@@ -702,6 +786,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonPsiquico",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo psiquico."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Psiquico"
   } ],
@@ -714,6 +802,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonRoca",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo roca."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Roca"
   } ],
@@ -726,6 +818,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonSiniestro",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo siniestro."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Siniestro"
   } ],
@@ -738,6 +834,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonTierra",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo tierra."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Tierra"
   } ],
@@ -750,6 +850,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonVeneno",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo veneno."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Veneno"
   } ],
@@ -762,6 +866,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#PokemonVolador",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sub-clase de pokemon que representa un Pokémon de tipo volador."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pokemon Volador"
   } ],
@@ -813,12 +921,20 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Tipo",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Representa un tipo elemental Pokémon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tipo"
   } ]
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "El tipo de experiencia de un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tipo Experiencia"
   } ]
@@ -843,8 +959,29 @@
     "@value" : "Water"
   } ]
 }, {
+  "@id" : "https://w3id.org/doisr/PokemonOntologyG2#debilContra",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que este tipo es debil (tiene multiplicador x2) contra otro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Tipo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "debil contra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Tipo"
+  } ]
+}, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#esEvolucionFinal",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si es un pokemon es la evolucion final o no."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -857,10 +994,15 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#evolucionaA",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que este pokemon puede evolucionar a otro."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
     "@value" : "evoluciona a"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -872,18 +1014,47 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que este pokemon ha evolucionado de otro."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
     "@value" : "evoluciona de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ]
 }, {
+  "@id" : "https://w3id.org/doisr/PokemonOntologyG2#fuerteContra",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que este tipo es fuerte (tiene multiplicador x2) contra otro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Tipo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "fuerte contra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Tipo"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/doisr/PokemonOntologyG2#debilContra"
+  } ]
+}, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasAttack",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de ataque tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -896,11 +1067,15 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasBMI",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cual es el BMI de un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has b m i"
+    "@value" : "has BMI"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -908,11 +1083,15 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasBST",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cual es el BST de un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has b s t"
+    "@value" : "has BST"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -920,6 +1099,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de experiencia base tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -932,6 +1115,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cual es el ratio de captura de un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -944,6 +1131,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasDefense",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de defensa tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -956,6 +1147,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos pasos se necesitan para un huevo."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -968,6 +1163,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de experiencia se necesitan para llegar al nivel 100."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -980,6 +1179,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cual es el ratio de pokemons hembra."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -992,6 +1195,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cual es el ratio de pokemons macho."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1004,11 +1211,15 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasHP",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de vida tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has h p"
+    "@value" : "has hp"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -1016,6 +1227,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasHeight",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cual es la altura de un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1028,6 +1243,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de ataque especial tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1040,6 +1259,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de defensa especial tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1052,6 +1275,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasSpeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cuantos puntos de velocidad tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1064,6 +1291,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#hasWeight",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Cual es el peso de un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1076,6 +1307,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#isLegendary",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica si un pokemon es legendario o no."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1088,8 +1323,15 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#potenciaMovimiento",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica la potencia (daño base) de un movimiento."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Movimiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "potencia movimiento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -1097,8 +1339,15 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#precisionMovimiento",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica la precision de un movimiento."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Movimiento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "precision movimiento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -1106,6 +1355,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que este pokemon pertenece a una categoria."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1118,6 +1371,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneColor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que este pokemon tiene cierto color."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1130,6 +1387,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica la fase evolutiva del pokemon (1, 2, 3)."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1142,6 +1403,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica la forma regional."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1154,6 +1419,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica de que generacion es el pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1166,6 +1435,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica de que grupo es el huevo del pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1178,6 +1451,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica la/s habilidad/es pasivas del pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1190,6 +1467,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que habilidad secreta tiene el pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1202,6 +1483,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que este pokemon puede aprender este movimiento."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1214,6 +1499,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneTipo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que tipo tiene un pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1226,6 +1515,10 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que tipo de experiencia tiene el pokemon."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Pokemon"
   } ],
@@ -1238,11 +1531,15 @@
 }, {
   "@id" : "https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica el tipo del movimiento."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Movimiento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "el tipo de un movimiento"
+    "@value" : "tipo de movimiento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/doisr/PokemonOntologyG2#Tipo"

@@ -121,22 +121,12 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-
-###  https://w3id.org/doisr/PokemonOntologyG2#fuerteContra
-:fuerteContra rdf:type owl:ObjectProperty ;
-              owl:inverseOf :debilContra ;
-              rdfs:domain :Tipo ;
-              rdfs:range :Tipo ;
-              rdfs:label "fuerte contra"@es ;
-              rdfs:comment "Indica que este tipo es fuerte (tiene multiplicador x2) contra otro."@es .
-            
-
 ###  https://w3id.org/doisr/PokemonOntologyG2#debilContra
 :debilContra rdf:type owl:ObjectProperty ;
              rdfs:domain :Tipo ;
              rdfs:range :Tipo ;
-             rdfs:label "debil contra"@es ;
-             rdfs:comment "Indica que este tipo es debil (tiene multiplicador x2) contra otro."@es .
+             rdfs:comment "Indica que este tipo es debil (tiene multiplicador x2) contra otro."@es ;
+             rdfs:label "debil contra"@es .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#evolucionaA
@@ -144,112 +134,121 @@ xsd:date rdf:type rdfs:Datatype .
              owl:inverseOf :evolucionaDe ;
              rdfs:domain :Pokemon ;
              rdfs:range :Pokemon ;
-             rdfs:label "evoluciona a"@es ;
-             rdfs:comment "Indica que este pokemon puede evolucionar a otro."@es .
+             rdfs:comment "Indica que este pokemon puede evolucionar a otro."@es ;
+             rdfs:label "evoluciona a"@es .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe
 :evolucionaDe rdf:type owl:ObjectProperty ;
               rdfs:domain :Pokemon ;
               rdfs:range :Pokemon ;
-              rdfs:label "evoluciona de"@es ;
-              rdfs:comment "Indica que este pokemon ha evolucionado de otro."@es .
+              rdfs:comment "Indica que este pokemon ha evolucionado de otro."@es ;
+              rdfs:label "evoluciona de"@es .
+
+
+###  https://w3id.org/doisr/PokemonOntologyG2#fuerteContra
+:fuerteContra rdf:type owl:ObjectProperty ;
+              owl:inverseOf :debilContra ;
+              rdfs:domain :Tipo ;
+              rdfs:range :Tipo ;
+              rdfs:comment "Indica que este tipo es fuerte (tiene multiplicador x2) contra otro."@es ;
+              rdfs:label "fuerte contra"@es .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria
 :tieneCategoria rdf:type owl:ObjectProperty ;
                 rdfs:domain :Pokemon ;
                 rdfs:range :Categoria ;
-                rdfs:label "tiene categoria" ;
-                rdfs:comment "Indica que este pokemon pertenece a una categoria."@es .
+                rdfs:comment "Indica que este pokemon pertenece a una categoria."@es ;
+                rdfs:label "tiene categoria" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneColor
 :tieneColor rdf:type owl:ObjectProperty ;
             rdfs:domain :Pokemon ;
             rdfs:range :Color ;
-            rdfs:label "tiene color" ;
-            rdfs:comment "Indica que este pokemon tiene cierto color."@es .
+            rdfs:comment "Indica que este pokemon tiene cierto color."@es ;
+            rdfs:label "tiene color" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva
 :tieneFaseEvolutiva rdf:type owl:ObjectProperty ;
                     rdfs:domain :Pokemon ;
                     rdfs:range :FaseEvolutiva ;
-                    rdfs:label "tiene fase evolutiva" ;
-                    rdfs:comment "Indica la fase evolutiva del pokemon (1, 2, 3)."@es .
+                    rdfs:comment "Indica la fase evolutiva del pokemon (1, 2, 3)."@es ;
+                    rdfs:label "tiene fase evolutiva" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional
 :tieneFormaRegional rdf:type owl:ObjectProperty ;
                     rdfs:domain :Pokemon ;
                     rdfs:range :FormaRegional ;
-                    rdfs:label "tiene forma regional" ;
-                    rdfs:comment "Indica la forma regional."@es .
+                    rdfs:comment "Indica la forma regional."@es ;
+                    rdfs:label "tiene forma regional" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion
 :tieneGeneracion rdf:type owl:ObjectProperty ;
                  rdfs:domain :Pokemon ;
                  rdfs:range :Generacion ;
-                 rdfs:label "tiene generacion" ;
-                 rdfs:comment "Indica de que generacion es el pokemon."@es .
+                 rdfs:comment "Indica de que generacion es el pokemon."@es ;
+                 rdfs:label "tiene generacion" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo
 :tieneGrupoHuevo rdf:type owl:ObjectProperty ;
                  rdfs:domain :Pokemon ;
                  rdfs:range :Grupohuevo ;
-                 rdfs:label "tiene grupo huevo" ;
-                 rdfs:comment "Indica de que grupo es el huevo del pokemon."@es .
+                 rdfs:comment "Indica de que grupo es el huevo del pokemon."@es ;
+                 rdfs:label "tiene grupo huevo" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad
 :tieneHabilidad rdf:type owl:ObjectProperty ;
                 rdfs:domain :Pokemon ;
                 rdfs:range :Habilidad ;
-                rdfs:label "tiene habilidad" ;
-                rdfs:comment "Indica la/s habilidad/es pasivas del pokemon."@es .
+                rdfs:comment "Indica la/s habilidad/es pasivas del pokemon."@es ;
+                rdfs:label "tiene habilidad" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta
 :tieneHabilidadSecreta rdf:type owl:ObjectProperty ;
                        rdfs:domain :Pokemon ;
                        rdfs:range :Habilidad ;
-                       rdfs:label "tiene habilidad secreta" ;
-                       rdfs:comment "Indica que habilidad secreta tiene el pokemon."@es .
+                       rdfs:comment "Indica que habilidad secreta tiene el pokemon."@es ;
+                       rdfs:label "tiene habilidad secreta" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento
 :tieneMovimiento rdf:type owl:ObjectProperty ;
                  rdfs:domain :Pokemon ;
                  rdfs:range :Movimiento ;
-                 rdfs:label "tiene Movimiento" ;
-                 rdfs:comment "Indica que este pokemon puede aprender este movimiento."@es .
+                 rdfs:comment "Indica que este pokemon puede aprender este movimiento."@es ;
+                 rdfs:label "tiene Movimiento" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneTipo
 :tieneTipo rdf:type owl:ObjectProperty ;
            rdfs:domain :Pokemon ;
            rdfs:range :Tipo ;
-           rdfs:label "tiene tipo" ;
-           rdfs:comment "Indica que tipo tiene un pokemon."@es .
+           rdfs:comment "Indica que tipo tiene un pokemon."@es ;
+           rdfs:label "tiene tipo" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia
 :tieneTipoExperiencia rdf:type owl:ObjectProperty ;
                       rdfs:domain :Pokemon ;
                       rdfs:range :TipoExperiencia ;
-                      rdfs:label "tiene tipo experiencia" ;
-                      rdfs:comment "Indica que tipo de experiencia tiene el pokemon."@es .
+                      rdfs:comment "Indica que tipo de experiencia tiene el pokemon."@es ;
+                      rdfs:label "tiene tipo experiencia" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento
 :tipoMovimiento rdf:type owl:ObjectProperty ;
                 rdfs:domain :Movimiento ;
                 rdfs:range :Tipo ;
-                rdfs:label "tipo de movimiento" ;
-                rdfs:comment "Indica el tipo del movimiento."@es .
+                rdfs:comment "Indica el tipo del movimiento."@es ;
+                rdfs:label "tipo de movimiento" .
 
 
 #################################################################
@@ -260,160 +259,160 @@ xsd:date rdf:type rdfs:Datatype .
 :esEvolucionFinal rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Pokemon ;
                   rdfs:range xsd:boolean ;
-                  rdfs:label "is final evolution" ;
-                  rdfs:comment "Indica si es un pokemon es la evolucion final o no."@es .
+                  rdfs:comment "Indica si es un pokemon es la evolucion final o no."@es ;
+                  rdfs:label "is final evolution" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasAttack
 :hasAttack rdf:type owl:DatatypeProperty ;
            rdfs:domain :Pokemon ;
            rdfs:range xsd:int ;
-           rdfs:label "has attack" ;
-           rdfs:comment "Cuantos puntos de ataque tiene un pokemon."@es .
+           rdfs:comment "Cuantos puntos de ataque tiene un pokemon."@es ;
+           rdfs:label "has attack" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasBMI
 :hasBMI rdf:type owl:DatatypeProperty ;
         rdfs:domain :Pokemon ;
         rdfs:range xsd:float ;
-        rdfs:label "has BMI" ;
-        rdfs:comment "Cual es el BMI de un pokemon."@es .
+        rdfs:comment "Cual es el BMI de un pokemon."@es ;
+        rdfs:label "has BMI" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasBST
 :hasBST rdf:type owl:DatatypeProperty ;
         rdfs:domain :Pokemon ;
         rdfs:range xsd:int ;
-        rdfs:label "has BST" ;
-        rdfs:comment "Cual es el BST de un pokemon."@es .
+        rdfs:comment "Cual es el BST de un pokemon."@es ;
+        rdfs:label "has BST" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience
 :hasBaseExperience rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Pokemon ;
                    rdfs:range xsd:int ;
-                   rdfs:label "has base experience" ;
-                   rdfs:comment "Cuantos puntos de experiencia base tiene un pokemon."@es .
+                   rdfs:comment "Cuantos puntos de experiencia base tiene un pokemon."@es ;
+                   rdfs:label "has base experience" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate
 :hasCatchRate rdf:type owl:DatatypeProperty ;
               rdfs:domain :Pokemon ;
               rdfs:range xsd:int ;
-              rdfs:label "has catch rate" ;
-              rdfs:comment "Cual es el ratio de captura de un pokemon."@es .
+              rdfs:comment "Cual es el ratio de captura de un pokemon."@es ;
+              rdfs:label "has catch rate" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasDefense
 :hasDefense rdf:type owl:DatatypeProperty ;
             rdfs:domain :Pokemon ;
             rdfs:range xsd:int ;
-            rdfs:label "has defense" ;
-            rdfs:comment "Cuantos puntos de defensa tiene un pokemon."@es .
+            rdfs:comment "Cuantos puntos de defensa tiene un pokemon."@es ;
+            rdfs:label "has defense" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps
 :hasEggSteps rdf:type owl:DatatypeProperty ;
              rdfs:domain :Pokemon ;
              rdfs:range xsd:int ;
-             rdfs:label "has egg steps" ;
-             rdfs:comment "Cuantos pasos se necesitan para un huevo."@es .
+             rdfs:comment "Cuantos pasos se necesitan para un huevo."@es ;
+             rdfs:label "has egg steps" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100
 :hasExpToLvl100 rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Pokemon ;
                 rdfs:range xsd:int ;
-                rdfs:label "has exp to lvl100" ;
-                rdfs:comment "Cuantos puntos de experiencia se necesitan para llegar al nivel 100."@es .
+                rdfs:comment "Cuantos puntos de experiencia se necesitan para llegar al nivel 100."@es ;
+                rdfs:label "has exp to lvl100" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio
 :hasGenderFemaleRatio rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Pokemon ;
                       rdfs:range xsd:float ;
-                      rdfs:label "has gender female ratio" ;
-                      rdfs:comment "Cual es el ratio de pokemons hembra."@es .
+                      rdfs:comment "Cual es el ratio de pokemons hembra."@es ;
+                      rdfs:label "has gender female ratio" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio
 :hasGenderMaleRatio rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Pokemon ;
                     rdfs:range xsd:float ;
-                    rdfs:label "has gender male ratio" ;
-                    rdfs:comment "Cual es el ratio de pokemons macho."@es .
+                    rdfs:comment "Cual es el ratio de pokemons macho."@es ;
+                    rdfs:label "has gender male ratio" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasHP
 :hasHP rdf:type owl:DatatypeProperty ;
        rdfs:domain :Pokemon ;
        rdfs:range xsd:int ;
-       rdfs:label "has hp" ;
-       rdfs:comment "Cuantos puntos de vida tiene un pokemon."@es .
+       rdfs:comment "Cuantos puntos de vida tiene un pokemon."@es ;
+       rdfs:label "has hp" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasHeight
 :hasHeight rdf:type owl:DatatypeProperty ;
            rdfs:domain :Pokemon ;
            rdfs:range xsd:float ;
-           rdfs:label "has height" ;
-           rdfs:comment "Cual es la altura de un pokemon."@es .
+           rdfs:comment "Cual es la altura de un pokemon."@es ;
+           rdfs:label "has height" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack
 :hasSpAttack rdf:type owl:DatatypeProperty ;
              rdfs:domain :Pokemon ;
              rdfs:range xsd:int ;
-             rdfs:label "has sp attack" ;
-             rdfs:comment "Cuantos puntos de ataque especial tiene un pokemon."@es .
+             rdfs:comment "Cuantos puntos de ataque especial tiene un pokemon."@es ;
+             rdfs:label "has sp attack" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense
 :hasSpDefense rdf:type owl:DatatypeProperty ;
               rdfs:domain :Pokemon ;
               rdfs:range xsd:int ;
-              rdfs:label "has sp defense" ;
-              rdfs:comment "Cuantos puntos de defensa especial tiene un pokemon."@es .
+              rdfs:comment "Cuantos puntos de defensa especial tiene un pokemon."@es ;
+              rdfs:label "has sp defense" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasSpeed
 :hasSpeed rdf:type owl:DatatypeProperty ;
           rdfs:domain :Pokemon ;
           rdfs:range xsd:int ;
-          rdfs:label "hasSpeed" ;
-          rdfs:comment "Cuantos puntos de velocidad tiene un pokemon."@es .
+          rdfs:comment "Cuantos puntos de velocidad tiene un pokemon."@es ;
+          rdfs:label "hasSpeed" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#hasWeight
 :hasWeight rdf:type owl:DatatypeProperty ;
            rdfs:domain :Pokemon ;
            rdfs:range xsd:float ;
-           rdfs:label "has weight" ;
-           rdfs:comment "Cual es el peso de un pokemon."@es .
+           rdfs:comment "Cual es el peso de un pokemon."@es ;
+           rdfs:label "has weight" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#isLegendary
 :isLegendary rdf:type owl:DatatypeProperty ;
              rdfs:domain :Pokemon ;
              rdfs:range xsd:boolean ;
-             rdfs:label "is legendary" ;
-             rdfs:comment "Indica si un pokemon es legendario o no."@es .
+             rdfs:comment "Indica si un pokemon es legendario o no."@es ;
+             rdfs:label "is legendary" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#potenciaMovimiento
 :potenciaMovimiento rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Movimiento ;
                     rdfs:range xsd:int ;
-                    rdfs:label "potencia movimiento" ;
-                    rdfs:comment "Indica la potencia (daño base) de un movimiento."@es .
+                    rdfs:comment "Indica la potencia (daño base) de un movimiento."@es ;
+                    rdfs:label "potencia movimiento" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#precisionMovimiento
 :precisionMovimiento rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Movimiento ;
                      rdfs:range xsd:int ;
-                     rdfs:label "precision movimiento" ;
-                     rdfs:comment "Indica la precision de un movimiento."@es .
+                     rdfs:comment "Indica la precision de un movimiento."@es ;
+                     rdfs:label "precision movimiento" .
 
 
 #################################################################
@@ -430,52 +429,52 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Categoria
 :Categoria rdf:type owl:Class ;
-           rdfs:label "Categoria" ;
-           rdfs:comment "Las categorias que existen de pokemons (ordinary, mythical, semi-legendary o legendary)."@es .
+           rdfs:comment "Las categorias que existen de pokemons (ordinary, mythical, semi-legendary o legendary)."@es ;
+           rdfs:label "Categoria" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Color
 :Color rdf:type owl:Class ;
-       rdfs:label "Color" ;
-       rdfs:comment "Los posibles colores que puede tener un pokemon."@es .
+       rdfs:comment "Los posibles colores que puede tener un pokemon."@es ;
+       rdfs:label "Color" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva
 :FaseEvolutiva rdf:type owl:Class ;
-               rdfs:label "Fase Evolutiva" ;
-               rdfs:comment "Que fases evolutivas hay."@es .
+               rdfs:comment "Que fases evolutivas hay."@es ;
+               rdfs:label "Fase Evolutiva" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#FormaRegional
 :FormaRegional rdf:type owl:Class ;
-               rdfs:label "Forma Regional" ;
-               rdfs:comment "Que formas regionales puede tomar un pokemon."@es .
+               rdfs:comment "Que formas regionales puede tomar un pokemon."@es ;
+               rdfs:label "Forma Regional" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Generacion
 :Generacion rdf:type owl:Class ;
-            rdfs:label "Generacion" ;
-            rdfs:comment "Las generaciones de pokemons que hay (1, 2, 3...)."@es .
+            rdfs:comment "Las generaciones de pokemons que hay (1, 2, 3...)."@es ;
+            rdfs:label "Generacion" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo
 :Grupohuevo rdf:type owl:Class ;
-            rdfs:label "Grupohuevo" ;
-            rdfs:comment "Los grupos de huevo que puede haber."@es .
+            rdfs:comment "Los grupos de huevo que puede haber."@es ;
+            rdfs:label "Grupohuevo" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Habilidad
 :Habilidad rdf:type owl:Class ;
-           rdfs:label "Habilidad" ;
-           rdfs:comment "Las habilidades pasivas que puede tener un pokemon."@es .
+           rdfs:comment "Las habilidades pasivas que puede tener un pokemon."@es ;
+           rdfs:label "Habilidad" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Movimiento
 :Movimiento rdf:type owl:Class ;
             owl:disjointWith :Pokemon ,
                              :Tipo ;
-            rdfs:label "Movimiento" ;
-            rdfs:comment "Los movimientos que puede realizar un pokemon."@es .
+            rdfs:comment "Los movimientos que puede realizar un pokemon."@es ;
+            rdfs:label "Movimiento" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Pokemon
@@ -489,8 +488,8 @@ xsd:date rdf:type rdfs:Datatype .
                            owl:maxCardinality "2"^^xsd:nonNegativeInteger
                          ] ;
          owl:disjointWith :Tipo ;
-         rdfs:label "Pokemon" ;
-         rdfs:comment "Clase que representa un Pokémon dentro de la ontología."@es .
+         rdfs:comment "Clase que representa un Pokémon dentro de la ontología."@es ;
+         rdfs:label "Pokemon" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonAcero
@@ -500,8 +499,8 @@ xsd:date rdf:type rdfs:Datatype .
                                     owl:hasValue :Steel
                                   ] ;
               rdfs:subClassOf :Pokemon ;
-              rdfs:label "Pokemon Acero" ;
-              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo acero."@es .
+              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo acero."@es ;
+              rdfs:label "Pokemon Acero" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonAgua
@@ -511,8 +510,8 @@ xsd:date rdf:type rdfs:Datatype .
                                    owl:hasValue :Water
                                  ] ;
              rdfs:subClassOf :Pokemon ;
-             rdfs:label "Pokemon Agua" ;
-             rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo agua."@es .
+             rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo agua."@es ;
+             rdfs:label "Pokemon Agua" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonBicho
@@ -522,8 +521,8 @@ xsd:date rdf:type rdfs:Datatype .
                                     owl:hasValue :Bug
                                   ] ;
               rdfs:subClassOf :Pokemon ;
-              rdfs:label "Pokemon Bicho" ;
-              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo bicho."@es .
+              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo bicho."@es ;
+              rdfs:label "Pokemon Bicho" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonDragon
@@ -533,8 +532,8 @@ xsd:date rdf:type rdfs:Datatype .
                                      owl:hasValue :Dragon
                                    ] ;
                rdfs:subClassOf :Pokemon ;
-               rdfs:label "Pokemon Dragon" ;
-               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo dragon."@es .
+               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo dragon."@es ;
+               rdfs:label "Pokemon Dragon" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonElectrico
@@ -544,8 +543,8 @@ xsd:date rdf:type rdfs:Datatype .
                                         owl:hasValue :Electric
                                       ] ;
                   rdfs:subClassOf :Pokemon ;
-                  rdfs:label "Pokemon Electrico" ;
-                  rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo electrico."@es .
+                  rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo electrico."@es ;
+                  rdfs:label "Pokemon Electrico" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonFantasma
@@ -555,8 +554,8 @@ xsd:date rdf:type rdfs:Datatype .
                                        owl:hasValue :Ghost
                                      ] ;
                  rdfs:subClassOf :Pokemon ;
-                 rdfs:label "Pokemon Fantasma" ;
-                 rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo fantasma."@es .
+                 rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo fantasma."@es ;
+                 rdfs:label "Pokemon Fantasma" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonFuego
@@ -566,8 +565,8 @@ xsd:date rdf:type rdfs:Datatype .
                                     owl:hasValue :Fire
                                   ] ;
               rdfs:subClassOf :Pokemon ;
-              rdfs:label "Pokemon Fuego" ;
-              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo fuego."@es .
+              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo fuego."@es ;
+              rdfs:label "Pokemon Fuego" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonHada
@@ -577,8 +576,8 @@ xsd:date rdf:type rdfs:Datatype .
                                    owl:hasValue :Fairy
                                  ] ;
              rdfs:subClassOf :Pokemon ;
-             rdfs:label "Pokemon Hada" ;
-             rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo hada."@es .
+             rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo hada."@es ;
+             rdfs:label "Pokemon Hada" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonHielo
@@ -588,8 +587,8 @@ xsd:date rdf:type rdfs:Datatype .
                                     owl:hasValue :Ice
                                   ] ;
               rdfs:subClassOf :Pokemon ;
-              rdfs:label "Pokemon Hielo" ;
-              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo hielo."@es .
+              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo hielo."@es ;
+              rdfs:label "Pokemon Hielo" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonLucha
@@ -599,8 +598,8 @@ xsd:date rdf:type rdfs:Datatype .
                                     owl:hasValue :Fighting
                                   ] ;
               rdfs:subClassOf :Pokemon ;
-              rdfs:label "Pokemon Lucha" ;
-              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo lucha."@es .
+              rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo lucha."@es ;
+              rdfs:label "Pokemon Lucha" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonNormal
@@ -610,8 +609,8 @@ xsd:date rdf:type rdfs:Datatype .
                                      owl:hasValue :Normal
                                    ] ;
                rdfs:subClassOf :Pokemon ;
-               rdfs:label "Pokemon Normal" ;
-               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo normal."@es .
+               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo normal."@es ;
+               rdfs:label "Pokemon Normal" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonPlanta
@@ -621,8 +620,8 @@ xsd:date rdf:type rdfs:Datatype .
                                      owl:hasValue :Grass
                                    ] ;
                rdfs:subClassOf :Pokemon ;
-               rdfs:label "Pokemon Planta" ;
-               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo planta."@es .
+               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo planta."@es ;
+               rdfs:label "Pokemon Planta" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonPsiquico
@@ -632,8 +631,8 @@ xsd:date rdf:type rdfs:Datatype .
                                        owl:hasValue :Psychic
                                      ] ;
                  rdfs:subClassOf :Pokemon ;
-                 rdfs:label "Pokemon Psiquico" ;
-                 rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo psiquico."@es .
+                 rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo psiquico."@es ;
+                 rdfs:label "Pokemon Psiquico" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonRoca
@@ -643,8 +642,8 @@ xsd:date rdf:type rdfs:Datatype .
                                    owl:hasValue :Rock
                                  ] ;
              rdfs:subClassOf :Pokemon ;
-             rdfs:label "Pokemon Roca" ;
-             rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo roca."@es .
+             rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo roca."@es ;
+             rdfs:label "Pokemon Roca" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonSiniestro
@@ -654,8 +653,8 @@ xsd:date rdf:type rdfs:Datatype .
                                         owl:hasValue :Dark
                                       ] ;
                   rdfs:subClassOf :Pokemon ;
-                  rdfs:label "Pokemon Siniestro" ;
-                  rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo siniestro."@es .
+                  rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo siniestro."@es ;
+                  rdfs:label "Pokemon Siniestro" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonTierra
@@ -665,8 +664,8 @@ xsd:date rdf:type rdfs:Datatype .
                                      owl:hasValue :Ground
                                    ] ;
                rdfs:subClassOf :Pokemon ;
-               rdfs:label "Pokemon Tierra" ;
-               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo tierra."@es .
+               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo tierra."@es ;
+               rdfs:label "Pokemon Tierra" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonVeneno
@@ -676,8 +675,8 @@ xsd:date rdf:type rdfs:Datatype .
                                      owl:hasValue :Poison
                                    ] ;
                rdfs:subClassOf :Pokemon ;
-               rdfs:label "Pokemon Veneno" ;
-               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo veneno."@es .
+               rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo veneno."@es ;
+               rdfs:label "Pokemon Veneno" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#PokemonVolador
@@ -687,20 +686,20 @@ xsd:date rdf:type rdfs:Datatype .
                                       owl:hasValue :Flying
                                     ] ;
                 rdfs:subClassOf :Pokemon ;
-                rdfs:label "Pokemon Volador" ;
-                rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo volador."@es .
+                rdfs:comment "Sub-clase de pokemon que representa un Pokémon de tipo volador."@es ;
+                rdfs:label "Pokemon Volador" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#Tipo
 :Tipo rdf:type owl:Class ;
-      rdfs:label "Tipo" ;
-      rdfs:comment "Representa un tipo elemental Pokémon."@es .
+      rdfs:comment "Representa un tipo elemental Pokémon."@es ;
+      rdfs:label "Tipo" .
 
 
 ###  https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia
 :TipoExperiencia rdf:type owl:Class ;
-                 rdfs:label "Tipo Experiencia" ;
-                 rdfs:comment "El tipo de experiencia de un pokemon."@es .
+                 rdfs:comment "El tipo de experiencia de un pokemon."@es ;
+                 rdfs:label "Tipo Experiencia" .
 
 
 #################################################################

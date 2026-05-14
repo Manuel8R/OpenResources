@@ -217,6 +217,18 @@
     
 
 
+    <!-- https://w3id.org/doisr/PokemonOntologyG2#debilContra -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#debilContra">
+        <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
+        <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
+        <rdfs:comment xml:lang="es">Indica que este tipo es debil (tiene multiplicador x2) contra otro.</rdfs:comment>
+        <rdfs:label xml:lang="es">debil contra</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/doisr/PokemonOntologyG2#evolucionaA -->
 
 
@@ -224,7 +236,8 @@
         <owl:inverseOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe"/>
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
-        <rdfs:label>evoluciona a</rdfs:label>
+        <rdfs:comment xml:lang="es">Indica que este pokemon puede evolucionar a otro.</rdfs:comment>
+        <rdfs:label xml:lang="es">evoluciona a</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -235,7 +248,21 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#evolucionaDe">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
-        <rdfs:label>evoluciona de</rdfs:label>
+        <rdfs:comment xml:lang="es">Indica que este pokemon ha evolucionado de otro.</rdfs:comment>
+        <rdfs:label xml:lang="es">evoluciona de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/doisr/PokemonOntologyG2#fuerteContra -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#fuerteContra">
+        <owl:inverseOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#debilContra"/>
+        <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
+        <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
+        <rdfs:comment xml:lang="es">Indica que este tipo es fuerte (tiene multiplicador x2) contra otro.</rdfs:comment>
+        <rdfs:label xml:lang="es">fuerte contra</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -246,6 +273,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneCategoria">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Categoria"/>
+        <rdfs:comment xml:lang="es">Indica que este pokemon pertenece a una categoria.</rdfs:comment>
         <rdfs:label>tiene categoria</rdfs:label>
     </owl:ObjectProperty>
     
@@ -257,6 +285,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneColor">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Color"/>
+        <rdfs:comment xml:lang="es">Indica que este pokemon tiene cierto color.</rdfs:comment>
         <rdfs:label>tiene color</rdfs:label>
     </owl:ObjectProperty>
     
@@ -268,6 +297,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneFaseEvolutiva">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva"/>
+        <rdfs:comment xml:lang="es">Indica la fase evolutiva del pokemon (1, 2, 3).</rdfs:comment>
         <rdfs:label>tiene fase evolutiva</rdfs:label>
     </owl:ObjectProperty>
     
@@ -279,6 +309,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneFormaRegional">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#FormaRegional"/>
+        <rdfs:comment xml:lang="es">Indica la forma regional.</rdfs:comment>
         <rdfs:label>tiene forma regional</rdfs:label>
     </owl:ObjectProperty>
     
@@ -290,6 +321,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneGeneracion">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Generacion"/>
+        <rdfs:comment xml:lang="es">Indica de que generacion es el pokemon.</rdfs:comment>
         <rdfs:label>tiene generacion</rdfs:label>
     </owl:ObjectProperty>
     
@@ -301,6 +333,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneGrupoHuevo">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo"/>
+        <rdfs:comment xml:lang="es">Indica de que grupo es el huevo del pokemon.</rdfs:comment>
         <rdfs:label>tiene grupo huevo</rdfs:label>
     </owl:ObjectProperty>
     
@@ -312,6 +345,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidad">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Habilidad"/>
+        <rdfs:comment xml:lang="es">Indica la/s habilidad/es pasivas del pokemon.</rdfs:comment>
         <rdfs:label>tiene habilidad</rdfs:label>
     </owl:ObjectProperty>
     
@@ -323,6 +357,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneHabilidadSecreta">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Habilidad"/>
+        <rdfs:comment xml:lang="es">Indica que habilidad secreta tiene el pokemon.</rdfs:comment>
         <rdfs:label>tiene habilidad secreta</rdfs:label>
     </owl:ObjectProperty>
     
@@ -334,6 +369,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneMovimiento">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Movimiento"/>
+        <rdfs:comment xml:lang="es">Indica que este pokemon puede aprender este movimiento.</rdfs:comment>
         <rdfs:label>tiene Movimiento</rdfs:label>
     </owl:ObjectProperty>
     
@@ -345,6 +381,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneTipo">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
+        <rdfs:comment xml:lang="es">Indica que tipo tiene un pokemon.</rdfs:comment>
         <rdfs:label>tiene tipo</rdfs:label>
     </owl:ObjectProperty>
     
@@ -356,6 +393,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tieneTipoExperiencia">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia"/>
+        <rdfs:comment xml:lang="es">Indica que tipo de experiencia tiene el pokemon.</rdfs:comment>
         <rdfs:label>tiene tipo experiencia</rdfs:label>
     </owl:ObjectProperty>
     
@@ -367,7 +405,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#tipoMovimiento">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Movimiento"/>
         <rdfs:range rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
-        <rdfs:label>el tipo de un movimiento</rdfs:label>
+        <rdfs:comment xml:lang="es">Indica el tipo del movimiento.</rdfs:comment>
+        <rdfs:label>tipo de movimiento</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -390,6 +429,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#esEvolucionFinal">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">Indica si es un pokemon es la evolucion final o no.</rdfs:comment>
         <rdfs:label>is final evolution</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -401,6 +441,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasAttack">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos puntos de ataque tiene un pokemon.</rdfs:comment>
         <rdfs:label>has attack</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -412,7 +453,8 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasBMI">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label>has b m i</rdfs:label>
+        <rdfs:comment xml:lang="es">Cual es el BMI de un pokemon.</rdfs:comment>
+        <rdfs:label>has BMI</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -423,7 +465,8 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasBST">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:label>has b s t</rdfs:label>
+        <rdfs:comment xml:lang="es">Cual es el BST de un pokemon.</rdfs:comment>
+        <rdfs:label>has BST</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -434,6 +477,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasBaseExperience">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos puntos de experiencia base tiene un pokemon.</rdfs:comment>
         <rdfs:label>has base experience</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -445,6 +489,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasCatchRate">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cual es el ratio de captura de un pokemon.</rdfs:comment>
         <rdfs:label>has catch rate</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -456,6 +501,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasDefense">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos puntos de defensa tiene un pokemon.</rdfs:comment>
         <rdfs:label>has defense</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -467,6 +513,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasEggSteps">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos pasos se necesitan para un huevo.</rdfs:comment>
         <rdfs:label>has egg steps</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -478,6 +525,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasExpToLvl100">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos puntos de experiencia se necesitan para llegar al nivel 100.</rdfs:comment>
         <rdfs:label>has exp to lvl100</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -489,6 +537,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasGenderFemaleRatio">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="es">Cual es el ratio de pokemons hembra.</rdfs:comment>
         <rdfs:label>has gender female ratio</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -500,6 +549,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasGenderMaleRatio">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="es">Cual es el ratio de pokemons macho.</rdfs:comment>
         <rdfs:label>has gender male ratio</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -511,7 +561,8 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasHP">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-        <rdfs:label>has h p</rdfs:label>
+        <rdfs:comment xml:lang="es">Cuantos puntos de vida tiene un pokemon.</rdfs:comment>
+        <rdfs:label>has hp</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -522,6 +573,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasHeight">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="es">Cual es la altura de un pokemon.</rdfs:comment>
         <rdfs:label>has height</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -533,6 +585,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasSpAttack">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos puntos de ataque especial tiene un pokemon.</rdfs:comment>
         <rdfs:label>has sp attack</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -544,6 +597,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasSpDefense">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos puntos de defensa especial tiene un pokemon.</rdfs:comment>
         <rdfs:label>has sp defense</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -555,6 +609,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasSpeed">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Cuantos puntos de velocidad tiene un pokemon.</rdfs:comment>
         <rdfs:label>hasSpeed</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -566,6 +621,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#hasWeight">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="es">Cual es el peso de un pokemon.</rdfs:comment>
         <rdfs:label>has weight</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -577,6 +633,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#isLegendary">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">Indica si un pokemon es legendario o no.</rdfs:comment>
         <rdfs:label>is legendary</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -588,6 +645,8 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#potenciaMovimiento">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Movimiento"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Indica la potencia (daño base) de un movimiento.</rdfs:comment>
+        <rdfs:label>potencia movimiento</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -598,6 +657,8 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/doisr/PokemonOntologyG2#precisionMovimiento">
         <rdfs:domain rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Movimiento"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment xml:lang="es">Indica la precision de un movimiento.</rdfs:comment>
+        <rdfs:label>precision movimiento</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -632,6 +693,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#Categoria">
+        <rdfs:comment xml:lang="es">Las categorias que existen de pokemons (ordinary, mythical, semi-legendary o legendary).</rdfs:comment>
         <rdfs:label>Categoria</rdfs:label>
     </owl:Class>
     
@@ -641,6 +703,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#Color">
+        <rdfs:comment xml:lang="es">Los posibles colores que puede tener un pokemon.</rdfs:comment>
         <rdfs:label>Color</rdfs:label>
     </owl:Class>
     
@@ -650,6 +713,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#FaseEvolutiva">
+        <rdfs:comment xml:lang="es">Que fases evolutivas hay.</rdfs:comment>
         <rdfs:label>Fase Evolutiva</rdfs:label>
     </owl:Class>
     
@@ -659,6 +723,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#FormaRegional">
+        <rdfs:comment xml:lang="es">Que formas regionales puede tomar un pokemon.</rdfs:comment>
         <rdfs:label>Forma Regional</rdfs:label>
     </owl:Class>
     
@@ -668,6 +733,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#Generacion">
+        <rdfs:comment xml:lang="es">Las generaciones de pokemons que hay (1, 2, 3...).</rdfs:comment>
         <rdfs:label>Generacion</rdfs:label>
     </owl:Class>
     
@@ -677,6 +743,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#Grupohuevo">
+        <rdfs:comment xml:lang="es">Los grupos de huevo que puede haber.</rdfs:comment>
         <rdfs:label>Grupohuevo</rdfs:label>
     </owl:Class>
     
@@ -686,6 +753,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#Habilidad">
+        <rdfs:comment xml:lang="es">Las habilidades pasivas que puede tener un pokemon.</rdfs:comment>
         <rdfs:label>Habilidad</rdfs:label>
     </owl:Class>
     
@@ -697,6 +765,7 @@
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#Movimiento">
         <owl:disjointWith rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
         <owl:disjointWith rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
+        <rdfs:comment xml:lang="es">Los movimientos que puede realizar un pokemon.</rdfs:comment>
         <rdfs:label>Movimiento</rdfs:label>
     </owl:Class>
     
@@ -719,6 +788,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Tipo"/>
+        <rdfs:comment xml:lang="es">Clase que representa un Pokémon dentro de la ontología.</rdfs:comment>
         <rdfs:label>Pokemon</rdfs:label>
     </owl:Class>
     
@@ -735,6 +805,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo acero.</rdfs:comment>
         <rdfs:label>Pokemon Acero</rdfs:label>
     </owl:Class>
     
@@ -751,6 +822,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo agua.</rdfs:comment>
         <rdfs:label>Pokemon Agua</rdfs:label>
     </owl:Class>
     
@@ -767,6 +839,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo bicho.</rdfs:comment>
         <rdfs:label>Pokemon Bicho</rdfs:label>
     </owl:Class>
     
@@ -783,6 +856,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo dragon.</rdfs:comment>
         <rdfs:label>Pokemon Dragon</rdfs:label>
     </owl:Class>
     
@@ -799,6 +873,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo electrico.</rdfs:comment>
         <rdfs:label>Pokemon Electrico</rdfs:label>
     </owl:Class>
     
@@ -815,6 +890,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo fantasma.</rdfs:comment>
         <rdfs:label>Pokemon Fantasma</rdfs:label>
     </owl:Class>
     
@@ -831,6 +907,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo fuego.</rdfs:comment>
         <rdfs:label>Pokemon Fuego</rdfs:label>
     </owl:Class>
     
@@ -847,6 +924,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo hada.</rdfs:comment>
         <rdfs:label>Pokemon Hada</rdfs:label>
     </owl:Class>
     
@@ -863,6 +941,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo hielo.</rdfs:comment>
         <rdfs:label>Pokemon Hielo</rdfs:label>
     </owl:Class>
     
@@ -879,6 +958,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo lucha.</rdfs:comment>
         <rdfs:label>Pokemon Lucha</rdfs:label>
     </owl:Class>
     
@@ -895,6 +975,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo normal.</rdfs:comment>
         <rdfs:label>Pokemon Normal</rdfs:label>
     </owl:Class>
     
@@ -911,6 +992,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo planta.</rdfs:comment>
         <rdfs:label>Pokemon Planta</rdfs:label>
     </owl:Class>
     
@@ -927,6 +1009,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo psiquico.</rdfs:comment>
         <rdfs:label>Pokemon Psiquico</rdfs:label>
     </owl:Class>
     
@@ -943,6 +1026,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo roca.</rdfs:comment>
         <rdfs:label>Pokemon Roca</rdfs:label>
     </owl:Class>
     
@@ -959,6 +1043,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo siniestro.</rdfs:comment>
         <rdfs:label>Pokemon Siniestro</rdfs:label>
     </owl:Class>
     
@@ -975,6 +1060,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo tierra.</rdfs:comment>
         <rdfs:label>Pokemon Tierra</rdfs:label>
     </owl:Class>
     
@@ -991,6 +1077,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo veneno.</rdfs:comment>
         <rdfs:label>Pokemon Veneno</rdfs:label>
     </owl:Class>
     
@@ -1007,6 +1094,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/doisr/PokemonOntologyG2#Pokemon"/>
+        <rdfs:comment xml:lang="es">Sub-clase de pokemon que representa un Pokémon de tipo volador.</rdfs:comment>
         <rdfs:label>Pokemon Volador</rdfs:label>
     </owl:Class>
     
@@ -1016,6 +1104,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#Tipo">
+        <rdfs:comment xml:lang="es">Representa un tipo elemental Pokémon.</rdfs:comment>
         <rdfs:label>Tipo</rdfs:label>
     </owl:Class>
     
@@ -1025,6 +1114,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/doisr/PokemonOntologyG2#TipoExperiencia">
+        <rdfs:comment xml:lang="es">El tipo de experiencia de un pokemon.</rdfs:comment>
         <rdfs:label>Tipo Experiencia</rdfs:label>
     </owl:Class>
     
